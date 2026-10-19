@@ -1,0 +1,590 @@
+{
+  "site": "middex",
+  "name": "middex.cz",
+  "measured_at": "2026-10-19T16:16:17.446734+00:00",
+  "pages": [
+    {
+      "url": "https://middex.cz/",
+      "verdict": "FAIL",
+      "reasons": [
+        "HTTP[adsbot-google] status 429 (Technical Problems)",
+        "HTTP[adsbot-google-mobile] status 429 (Technical Problems)",
+        "HTTP[googlebot] status 429 (Technical Problems)",
+        "HTTP[firefox] status 429 (Technical Problems)",
+        "HTTP[chrome] status 429 (Technical Problems)",
+        "Browser[firefox] cold visit ended with status 429 (Technical Problems)",
+        "Browser[chromium-adsbot-mobile] cold visit ended with status 429 (Technical Problems)",
+        "Browser[chromium-adsbot-mobile] warm visit ended with status 429 (Technical Problems)"
+      ],
+      "http": [
+        {
+          "ua": "adsbot-google",
+          "url": "https://middex.cz/",
+          "final_url": "https://middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.99,
+          "total_s": 0.99,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "adsbot-google-mobile",
+          "url": "https://middex.cz/",
+          "final_url": "https://middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 1.055,
+          "total_s": 1.055,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 19090,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "googlebot",
+          "url": "https://middex.cz/",
+          "final_url": "https://middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.989,
+          "total_s": 0.989,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "firefox",
+          "url": "https://middex.cz/",
+          "final_url": "https://middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 1.06,
+          "total_s": 1.06,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "chrome",
+          "url": "https://middex.cz/",
+          "final_url": "https://middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.897,
+          "total_s": 0.897,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 19090,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        }
+      ],
+      "browser": [
+        {
+          "browser": "firefox",
+          "user_agent": "default",
+          "url": "https://middex.cz/",
+          "cold": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 851,
+              "dom_content_loaded_ms": 1091,
+              "load_ms": 1092,
+              "lcp_ms": 1117,
+              "transfer_bytes": 18826
+            },
+            "challenge_screenshot": "shots/middex-0-firefox-cold-challenge.jpg",
+            "final_screenshot": "shots/middex-0-firefox-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [],
+          "warm": {
+            "first_status": 403,
+            "document_responses": [
+              {
+                "status": 403,
+                "url": "https://middex.cz/"
+              },
+              {
+                "status": 301,
+                "url": "https://middex.cz/"
+              },
+              {
+                "status": 403,
+                "url": "https://www.middex.cz/"
+              },
+              {
+                "status": 200,
+                "url": "https://www.middex.cz/"
+              },
+              {
+                "status": 200,
+                "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LescIYUAAAAACBuPc3uLlXt-sb8XTZTBrZIc7Hs&co=aHR0cHM6Ly93d3cubWlkZGV4LmN6OjQ0Mw..&hl=cs&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ipycbam3agoj"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "wait a moment"
+              ],
+              "title": "Wait a moment...",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": 9.827,
+            "stuck_on_challenge": false,
+            "final_status": 200,
+            "final_url": "https://www.middex.cz/",
+            "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
+            "perf": {
+              "ttfb_ms": 156,
+              "dom_content_loaded_ms": 1284,
+              "load_ms": 1817,
+              "lcp_ms": 671,
+              "transfer_bytes": 15565
+            },
+            "challenge_screenshot": "shots/middex-0-firefox-warm-challenge.jpg",
+            "final_screenshot": "shots/middex-0-firefox-warm-final.jpg"
+          },
+          "label": "firefox"
+        },
+        {
+          "browser": "chromium",
+          "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",
+          "url": "https://middex.cz/",
+          "cold": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 448,
+              "dom_content_loaded_ms": 603,
+              "load_ms": 603,
+              "lcp_ms": 620,
+              "transfer_bytes": 19228
+            },
+            "challenge_screenshot": "shots/middex-0-chromium-adsbot-mobile-cold-challenge.jpg",
+            "final_screenshot": "shots/middex-0-chromium-adsbot-mobile-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [],
+          "warm": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 286,
+              "dom_content_loaded_ms": 302,
+              "load_ms": 303,
+              "lcp_ms": 332,
+              "transfer_bytes": 19228
+            },
+            "challenge_screenshot": "shots/middex-0-chromium-adsbot-mobile-warm-challenge.jpg",
+            "final_screenshot": "shots/middex-0-chromium-adsbot-mobile-warm-final.jpg"
+          },
+          "label": "chromium-adsbot-mobile"
+        }
+      ]
+    },
+    {
+      "url": "https://www.middex.cz/",
+      "verdict": "FAIL",
+      "reasons": [
+        "HTTP[adsbot-google] status 429 (Technical Problems)",
+        "HTTP[adsbot-google-mobile] status 429 (Technical Problems)",
+        "HTTP[googlebot] status 429 (Technical Problems)",
+        "HTTP[firefox] status 429 (Technical Problems)",
+        "HTTP[chrome] status 429 (Technical Problems)",
+        "Browser[firefox] cold visit ended with status 429 (Technical Problems)",
+        "Browser[chromium-adsbot-mobile] cold visit ended with status 429 (Technical Problems)",
+        "Browser[chromium-adsbot-mobile] warm visit ended with status 429 (Technical Problems)"
+      ],
+      "http": [
+        {
+          "ua": "adsbot-google",
+          "url": "https://www.middex.cz/",
+          "final_url": "https://www.middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.819,
+          "total_s": 0.82,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "adsbot-google-mobile",
+          "url": "https://www.middex.cz/",
+          "final_url": "https://www.middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.862,
+          "total_s": 0.862,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 19090,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "googlebot",
+          "url": "https://www.middex.cz/",
+          "final_url": "https://www.middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.809,
+          "total_s": 0.809,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "firefox",
+          "url": "https://www.middex.cz/",
+          "final_url": "https://www.middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.768,
+          "total_s": 0.768,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 18688,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        },
+        {
+          "ua": "chrome",
+          "url": "https://www.middex.cz/",
+          "final_url": "https://www.middex.cz/",
+          "status": 429,
+          "redirects": [],
+          "ttfb_s": 0.867,
+          "total_s": 0.867,
+          "headers": {
+            "server": "aruba-proxy",
+            "cache-control": "max-age=0, no-store"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "too many requests"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": true,
+          "title": "Technical Problems",
+          "html_bytes": 19090,
+          "snippet": "<!doctypehtml><html lang=en translate=no><meta content=\"text/html; charset=UTF-8\"http-equiv=Content-Type><meta content=\"width=device-width,initial-scale=1\"name=viewport><meta content=\"ie=edge\"http-equiv=X-UA-Compatible><style>*{margin:0;font-family:Lato,Arial,sans-serif;font-weight:400}.logo{padding-top:10px;padding-left:40px;padding-bottom:10px;border-bottom:1px solid #bfbfbf}.logo img{height:60px}.wrapper{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.container{min-width:350px;padding-top:4%}.container-image{display:flex;justify-content:center;flex-basis:25%}.container-errors{line-height:24px;flex-basis:40%;font-size:18px}.container-errors ul{list-style-type:none}.container-errors ul li{display:inline-block;padding-bottom:64px}.error-title{margin-bottom:8px;font-size:18px;line-height:34px}h2{font-size:2rem}h6{color:#9b9b9b;font-feature-settings:'clig' off,'liga' off;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase}.error-description{font-size:14px;line-height:21px}</style><title>Technical Problems</title><div class=logo><a href=https://forpsi.com/ target=_blank title=www.forpsi.com><img src=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9"
+        }
+      ],
+      "browser": [
+        {
+          "browser": "firefox",
+          "user_agent": "default",
+          "url": "https://www.middex.cz/",
+          "cold": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://www.middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://www.middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 705,
+              "dom_content_loaded_ms": 869,
+              "load_ms": 875,
+              "lcp_ms": 885,
+              "transfer_bytes": 18826
+            },
+            "challenge_screenshot": "shots/middex-1-firefox-cold-challenge.jpg",
+            "final_screenshot": "shots/middex-1-firefox-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [],
+          "warm": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://www.middex.cz/"
+              },
+              {
+                "status": 200,
+                "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LescIYUAAAAACBuPc3uLlXt-sb8XTZTBrZIc7Hs&co=aHR0cHM6Ly93d3cubWlkZGV4LmN6OjQ0Mw..&hl=cs&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=40y9woylrod4"
+              }
+            ],
+            "first_document": {
+              "is_challenge": false,
+              "matches": [],
+              "title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": false,
+            "time_to_real_content_s": 1.659,
+            "stuck_on_challenge": false,
+            "final_status": 200,
+            "final_url": "https://www.middex.cz/",
+            "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
+            "perf": {
+              "ttfb_ms": 151,
+              "dom_content_loaded_ms": 1019,
+              "load_ms": 1605,
+              "lcp_ms": 656,
+              "transfer_bytes": 15565
+            },
+            "final_screenshot": "shots/middex-1-firefox-warm-final.jpg"
+          },
+          "label": "firefox"
+        },
+        {
+          "browser": "chromium",
+          "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",
+          "url": "https://www.middex.cz/",
+          "cold": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://www.middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://www.middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 440,
+              "dom_content_loaded_ms": 592,
+              "load_ms": 592,
+              "lcp_ms": 616,
+              "transfer_bytes": 19228
+            },
+            "challenge_screenshot": "shots/middex-1-chromium-adsbot-mobile-cold-challenge.jpg",
+            "final_screenshot": "shots/middex-1-chromium-adsbot-mobile-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [],
+          "warm": {
+            "first_status": 429,
+            "document_responses": [
+              {
+                "status": 429,
+                "url": "https://www.middex.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "příliš mnoho požadavků",
+                "too many requests"
+              ],
+              "title": "Technical Problems",
+              "mentions_forpsi": true
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 429,
+            "final_url": "https://www.middex.cz/",
+            "final_title": "Technical Problems",
+            "perf": {
+              "ttfb_ms": 285,
+              "dom_content_loaded_ms": 299,
+              "load_ms": 299,
+              "lcp_ms": 332,
+              "transfer_bytes": 19228
+            },
+            "challenge_screenshot": "shots/middex-1-chromium-adsbot-mobile-warm-challenge.jpg",
+            "final_screenshot": "shots/middex-1-chromium-adsbot-mobile-warm-final.jpg"
+          },
+          "label": "chromium-adsbot-mobile"
+        }
+      ]
+    }
+  ]
+}
