@@ -1,7 +1,7 @@
 # 001 – FORPSI „kontrola prohlížeče“ → Google Ads zamítá reklamy (nefunkční cíl)
 
 **Nahlášeno:** 2026-10-19, PPC specialistka (externí agentura)
-**Stav:** otevřeno – čeká na doplnění domény do `sites.yml` a první měření
+**Stav:** potvrzeno měřením 2026-10-19 (middex.cz → HTTP 429 / 403 z FORPSI proxy) – čeká na FORPSI podporu
 
 ## Symptom (z e-mailu)
 
@@ -29,6 +29,14 @@ Kontrola cílové URL v Google Ads (AdsBot-Google) mezistránku nepřejde nebo n
    - hlavičky `Server`, `Set-Cookie` – název cookie často prozradí, o jaký filtr jde.
 4. Opakovat měření několikrát denně – zjistit, jestli je ochrana trvalá, nebo se zapíná jen při zátěži
    (FORPSI uvádí, že roboty standardně neblokuje, ale při přetížení může přístupy dočasně omezit).
+
+## Zjištění ze znalostní báze FORPSI
+
+- [Ochrana před DoS – chyba 429](https://support.forpsi.com/kb/a4605/ochrana-pred-dos-chyba-429.aspx?translation-detect=false)
+  ([EN](https://support.forpsi.com/kb/a4632/dos-protection-error-429.aspx)): ochrana je na Linux webhostingu
+  **trvale zapnutá**, blokuje IP adresu s příliš mnoha požadavky, blokace po čase vyprší a při opakování se obnoví.
+  Jako častou příčinu uvádí vadné WordPress pluginy/šablony.
+- Žádný článek nepopisuje vypnutí ochrany v administraci ani stránku „ověření prohlížeče“ → řešit ticketem.
 
 ## Možná řešení
 
