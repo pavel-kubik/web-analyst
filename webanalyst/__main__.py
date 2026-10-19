@@ -35,7 +35,7 @@ def verdict(http: list[dict], browsers: list[dict]) -> tuple[str, list[str]]:
         if "error" in h:
             fail.append(f"{tag} error: {h['error']}")
         elif h["status"] >= 400:
-            fail.append(f"{tag} status {h['status']}")
+            fail.append(f"{tag} status {h['status']} ({h['title']})")
         elif h["is_challenge"]:
             (fail if h["ua"].startswith("adsbot") else warn).append(f"{tag} got a browser-check page ({', '.join(h['matches']) or 'JS reload'})")
         elif h["ttfb_s"] > 2:
@@ -45,6 +45,12 @@ def verdict(http: list[dict], browsers: list[dict]) -> tuple[str, list[str]]:
         cold = b.get("cold", {})
         if "error" in b or "error" in cold:
             fail.append(f"{tag} error: {b.get('error') or cold.get('error')}")
+            continue
+        for visit in ("cold", "warm"):
+            v = b.get(visit) or {}
+            if (v.get("final_status") or 0) >= 400:
+                fail.append(f"{tag} {visit} visit ended with status {v['final_status']} ({v.get('final_title', '')})")
+        if any(r.startswith(f"{tag} ") for r in fail):
             continue
         if cold["stuck_on_challenge"]:
             fail.append(f"{tag} stuck on browser-check page")
