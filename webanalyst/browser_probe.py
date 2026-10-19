@@ -37,7 +37,7 @@ def _screenshot(page) -> str:
 def _visit(page, url: str, max_wait_s: float) -> dict:
     """Navigate and wait until any challenge interstitial is gone (or max_wait_s passes)."""
     statuses = []
-    page.on("response", lambda r: statuses.append({"status": r.status, "url": r.url}) if r.request.resource_type == "document" else None)
+    page.on("response", lambda r: statuses.append({"status": r.status, "url": r.url}) if r.request.resource_type == "document" and r.frame == page.main_frame else None)
     started = time.perf_counter()
     try:
         resp = page.goto(url, wait_until="domcontentloaded", timeout=max_wait_s * 1000)
