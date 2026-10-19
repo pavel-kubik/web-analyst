@@ -1,6 +1,9 @@
 name: Measure
 
 on:
+  push:
+    branches: [main]
+    paths: ["sites.yml", "webanalyst/**", "requirements.txt", ".github/workflows/measure.yml"]
   schedule:
     - cron: "17 */3 * * *"   # every 3 hours
   workflow_dispatch:
