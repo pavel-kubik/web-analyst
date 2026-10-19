@@ -69,6 +69,9 @@ def _visit(page, url: str, max_wait_s: float) -> dict:
     except Exception:
         pass
     final = analyse_html(page.content())
+    final_status = statuses[-1]["status"] if statuses else (resp.status if resp else None)
+    if final_status and final_status >= 400:
+        content_at = None  # an error page is not real content
     return {
         "first_status": resp.status if resp else None,
         "document_responses": statuses,
@@ -76,6 +79,7 @@ def _visit(page, url: str, max_wait_s: float) -> dict:
         "challenge_seen": first["is_challenge"],
         "time_to_real_content_s": round(content_at, 3) if content_at is not None else None,
         "stuck_on_challenge": content_at is None,
+        "final_status": final_status,
         "final_url": page.url,
         "final_title": final["title"],
         "perf": page.evaluate(_PERF_JS),

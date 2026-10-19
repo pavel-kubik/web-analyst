@@ -6,6 +6,10 @@ CHALLENGE_PATTERNS = [
     r"kontrol\w* (va[sš]eho |prohl[ií][zž]e[cč]e)",
     r"prob[ií]h[aá] kontrola",
     r"ov[eě][rř]ov[aá]n[ií] prohl[ií][zž]e[cč]e",
+    r"ov[eě][rř]en[ií] (va[sš]eho )?prohl[ií][zž]e[cč]e",  # FORPSI: "Probíhá ověření vašeho prohlížeče"
+    r"wait a moment",
+    r"p[rř][ií]li[sš] mnoho po[zž]adavk[uů]",  # FORPSI 429 page
+    r"too many requests",
     r"checking (your|the) browser",
     r"verify(ing)? (you are|that you are) (human|not a robot)",
     r"just a moment\.\.\.",
