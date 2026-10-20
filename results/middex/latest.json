@@ -1,13 +1,13 @@
 {
   "site": "middex",
   "name": "middex.cz",
-  "measured_at": "2026-10-19T22:23:19.773443+00:00",
+  "measured_at": "2026-10-20T04:55:01.651874+00:00",
   "pages": [
     {
       "url": "https://middex.cz/",
       "verdict": "WARN",
       "reasons": [
-        "HTTP[adsbot-google] slow TTFB 2.877 s"
+        "HTTP[adsbot-google] slow TTFB 3.392 s"
       ],
       "http": [
         {
@@ -22,8 +22,8 @@
               "location": "https://www.middex.cz/"
             }
           ],
-          "ttfb_s": 2.877,
-          "total_s": 2.878,
+          "ttfb_s": 3.392,
+          "total_s": 3.392,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -50,8 +50,8 @@
               "location": "https://www.middex.cz/"
             }
           ],
-          "ttfb_s": 1.707,
-          "total_s": 1.708,
+          "ttfb_s": 1.941,
+          "total_s": 1.942,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -78,8 +78,8 @@
               "location": "https://www.middex.cz/"
             }
           ],
-          "ttfb_s": 1.819,
-          "total_s": 1.819,
+          "ttfb_s": 1.924,
+          "total_s": 1.924,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -106,8 +106,8 @@
               "location": "https://www.middex.cz/"
             }
           ],
-          "ttfb_s": 1.384,
-          "total_s": 1.384,
+          "ttfb_s": 1.561,
+          "total_s": 1.561,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -134,8 +134,8 @@
               "location": "https://www.middex.cz/"
             }
           ],
-          "ttfb_s": 1.679,
-          "total_s": 1.679,
+          "ttfb_s": 1.653,
+          "total_s": 1.654,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -175,16 +175,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 2.887,
+            "time_to_real_content_s": 3.447,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 1202,
-              "dom_content_loaded_ms": 2331,
-              "load_ms": 2818,
-              "lcp_ms": 1731,
+              "ttfb_ms": 1516,
+              "dom_content_loaded_ms": 2697,
+              "load_ms": 3377,
+              "lcp_ms": 2088,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-0-firefox-cold-final.jpg"
@@ -214,16 +214,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 1.282,
+            "time_to_real_content_s": 1.722,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 543,
-              "dom_content_loaded_ms": 815,
-              "load_ms": 1244,
-              "lcp_ms": 925,
+              "ttfb_ms": 542,
+              "dom_content_loaded_ms": 886,
+              "load_ms": 1628,
+              "lcp_ms": 1029,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-0-firefox-warm-final.jpg"
@@ -253,16 +253,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 2.305,
+            "time_to_real_content_s": 2.66,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
               "ttfb_ms": 870,
-              "dom_content_loaded_ms": 1747,
-              "load_ms": 2249,
-              "lcp_ms": 1648,
+              "dom_content_loaded_ms": 1797,
+              "load_ms": 2565,
+              "lcp_ms": 1720,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-0-chromium-adsbot-mobile-cold-final.jpg"
@@ -291,16 +291,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.836,
+            "time_to_real_content_s": 1.24,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 169,
-              "dom_content_loaded_ms": 383,
-              "load_ms": 784,
-              "lcp_ms": 392,
+              "ttfb_ms": 171,
+              "dom_content_loaded_ms": 513,
+              "load_ms": 1148,
+              "lcp_ms": 508,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-0-chromium-adsbot-mobile-warm-final.jpg"
@@ -320,8 +320,8 @@
           "final_url": "https://www.middex.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.937,
-          "total_s": 0.937,
+          "ttfb_s": 0.669,
+          "total_s": 0.67,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -342,8 +342,8 @@
           "final_url": "https://www.middex.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.666,
-          "total_s": 0.667,
+          "ttfb_s": 0.857,
+          "total_s": 0.858,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -364,8 +364,8 @@
           "final_url": "https://www.middex.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.841,
-          "total_s": 0.841,
+          "ttfb_s": 0.834,
+          "total_s": 0.835,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -386,8 +386,8 @@
           "final_url": "https://www.middex.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.849,
-          "total_s": 0.849,
+          "ttfb_s": 0.667,
+          "total_s": 0.667,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -408,8 +408,8 @@
           "final_url": "https://www.middex.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.684,
-          "total_s": 0.685,
+          "ttfb_s": 0.83,
+          "total_s": 0.831,
           "headers": {
             "server": "aruba-proxy",
             "cache-control": "max-age=0, no-cache, no-store, must-revalidate"
@@ -445,16 +445,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 2.248,
+            "time_to_real_content_s": 2.762,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 658,
-              "dom_content_loaded_ms": 1614,
-              "load_ms": 2191,
-              "lcp_ms": 1452,
+              "ttfb_ms": 680,
+              "dom_content_loaded_ms": 1836,
+              "load_ms": 2662,
+              "lcp_ms": 1670,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-1-firefox-cold-final.jpg"
@@ -480,16 +480,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.903,
+            "time_to_real_content_s": 1.398,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 164,
-              "dom_content_loaded_ms": 370,
-              "load_ms": 838,
-              "lcp_ms": 492,
+              "ttfb_ms": 169,
+              "dom_content_loaded_ms": 548,
+              "load_ms": 1293,
+              "lcp_ms": 751,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-1-firefox-warm-final.jpg"
@@ -515,24 +515,22 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 2.06,
+            "time_to_real_content_s": 2.856,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 640,
-              "dom_content_loaded_ms": 1559,
-              "load_ms": 2002,
-              "lcp_ms": 1404,
+              "ttfb_ms": 654,
+              "dom_content_loaded_ms": 1585,
+              "load_ms": 2767,
+              "lcp_ms": 1476,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-1-chromium-adsbot-mobile-cold-final.jpg"
           },
           "cookies_after_first_visit": [
             "_GRECAPTCHA",
-            "_ga",
-            "_ga_1VXJ5Z9HEP",
             "cookie_consent_level",
             "test_cookie"
           ],
@@ -551,16 +549,16 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.826,
+            "time_to_real_content_s": 1.281,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://www.middex.cz/",
             "final_title": "Dovoz, prodej, montáž folii LLumar - MIDDEX",
             "perf": {
-              "ttfb_ms": 169,
-              "dom_content_loaded_ms": 386,
-              "load_ms": 780,
-              "lcp_ms": 404,
+              "ttfb_ms": 174,
+              "dom_content_loaded_ms": 532,
+              "load_ms": 1186,
+              "lcp_ms": 508,
               "transfer_bytes": 15565
             },
             "final_screenshot": "shots/middex-1-chromium-adsbot-mobile-warm-final.jpg"
