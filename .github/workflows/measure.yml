@@ -23,6 +23,8 @@ jobs:
   measure:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    # Cloudflare credentials live in the prod environment: CLOUDFLARE_API_TOKEN (secret), CLOUDFLARE_ACCOUNT_ID (variable).
+    environment: prod
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -56,10 +58,10 @@ jobs:
           path: docs/
       - name: Check Cloudflare secrets
         id: cf
-        # Upload is skipped until both secrets exist (Settings -> Secrets and variables -> Actions).
+        # Upload is skipped until both exist (Settings -> Environments -> prod).
         env:
           TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ACCOUNT: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: echo "enabled=$([ -n "$TOKEN" ] && [ -n "$ACCOUNT" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
       # The frontend deploys separately: Cloudflare Pages builds docs/ from the repo (Git integration).
       - name: Upload new runs to R2
@@ -67,7 +69,7 @@ jobs:
         continue-on-error: true   # still commit results; re-send missed runs with `python -m webanalyst.publish --all`
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: python -m webanalyst.publish   # before the commit: new runs = untracked files in results/
       - name: Commit results
         run: |

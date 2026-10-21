@@ -83,7 +83,8 @@ commits `results/` back to the repo.
    ```
 3. **Data URL**: put the r2.dev URL with a trailing slash into `<meta name="data-base" content="…">` in `docs/index.html` and commit.
 4. **API token**: My Profile → API Tokens → Create custom token: *Account → Workers R2 Storage → Edit*, limited to this
-   account. Add repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Until both exist the upload is skipped.
+   account. In GitHub → Settings → Environments → `prod`, add secret `CLOUDFLARE_API_TOKEN` and variable
+   `CLOUDFLARE_ACCOUNT_ID` (the measure job runs in `environment: prod`). Until both exist the upload is skipped.
 5. **Backfill** existing history once: run `python -m webanalyst.publish --all` locally with both variables set.
 6. **Pages**: Workers & Pages → Create → Pages → *Connect to Git* → this repo only. Framework preset *None*, build command
    empty (or `exit 0`), output directory `docs`. Then Settings → Builds → *Build watch paths*: include `docs/*`, so the
