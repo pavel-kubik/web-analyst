@@ -63,6 +63,12 @@ writes a verdict summary, uploads new data to R2 and commits `results/` back to 
 
 ### Cloudflare setup (once)
 
+| | |
+|---|---|
+| Account ID | `584a900cab287c4bc9a4c681a6e808a4` – ⚠️ **shared with firmometr** (see [TODO](tasks/TODO.md)) |
+| Dashboard | https://web-analyst.pages.dev/ (Pages project `web-analyst`, Git integration) |
+| R2 bucket | `web-analyst-data`, public at `https://pub-55869ccb79434b3aa3a8ca444d75daba.r2.dev/` |
+
 1. **R2 bucket**: R2 → Create bucket `web-analyst-data`. Settings → Public access → *R2.dev subdomain* → Allow; note the
    `https://pub-….r2.dev` URL. ⚠️ r2.dev is rate-limited and for prototypes only – see [TODO](tasks/TODO.md).
 2. **CORS** (bucket Settings → CORS policy):
