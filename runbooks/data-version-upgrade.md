@@ -29,13 +29,11 @@ Expect a short outage between steps 3 and 4: the deployed page may already expec
    Preview with an empty `<meta name="data-base" content="">` (don't commit that) and
    `python -m http.server -d docs` → http://localhost:8000.
 3. **Push** – runs the tests; Cloudflare Pages deploys the new frontend.
-4. **Backfill R2 right away** (all history in the new format, manifest uploaded last):
-   ```bash
-   git pull
-   export CLOUDFLARE_API_TOKEN='…' CLOUDFLARE_ACCOUNT_ID=584a900cab287c4bc9a4c681a6e808a4
-   python -m webanalyst --report-only
-   python -m webanalyst.publish --all
-   ```
+4. **Backfill R2 right away** (all history in the new format, manifest uploaded last): GitHub → Actions →
+   **Backfill R2** → *Run workflow* (or `gh workflow run backfill.yml`). It runs in the `prod` environment,
+   needs no local credentials and sends no requests to measured sites.
+   Local alternative: `git pull`, set `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID`, then
+   `python -m webanalyst --report-only && python -m webanalyst.publish --all`.
 5. **Verify** in a private/incognito window (no cache) and on a phone: data loads, no
    "could not be loaded" note.
 6. **Clean up after a few days**: delete the old prefix `data/v<N>/` in R2 – bucket `web-analyst-data` →
@@ -44,8 +42,9 @@ Expect a short outage between steps 3 and 4: the deployed page may already expec
 
 ## First migration (unversioned → v1, 2026-10-21)
 
-Before versioning, run files lived at `data/<site>/<stamp>.json`. After the push that introduced `data/v1/`,
-run step 4 once, verify (step 5), then delete the legacy prefix `data/middex/` as in step 6.
+Before versioning, run files lived at `data/<site>/<stamp>.json`. Done with **Backfill R2** and
+`delete_legacy: true`, which uploads `data/v1/…` and then deletes exactly the old `data/<site>/<stamp>.json`
+keys derived from `results/` (`publish.py --delete-legacy`).
 
 ## Rollback
 

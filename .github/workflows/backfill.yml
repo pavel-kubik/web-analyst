@@ -1,0 +1,47 @@
+name: Backfill R2
+
+# Re-exports all of results/ and uploads it to R2 (data/v<N>/…, manifest last). No browsers, no requests to
+# measured sites. Use after a data-format upgrade or to repair R2 (runbooks/data-version-upgrade.md).
+on:
+  workflow_dispatch:
+    inputs:
+      delete_legacy:
+        description: "Also delete pre-versioning data/<site>/<stamp>.json objects"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: measure   # never overlaps a measurement upload
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: prod
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Export dashboard data
+        run: python -m webanalyst --report-only
+      - name: Upload to R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          DELETE_LEGACY: ${{ inputs.delete_legacy }}
+        run: |
+          if [ "$DELETE_LEGACY" = "true" ]; then
+            python -m webanalyst.publish --all --delete-legacy
+          else
+            python -m webanalyst.publish --all
+          fi

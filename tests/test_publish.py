@@ -41,6 +41,14 @@ class PublishTest(unittest.TestCase):
             self.assertIn("immutable", by_key[f"{run_dir()}/s/r.json"])
             self.assertEqual(by_key["data/manifest.json"], "public, max-age=60")
 
+    def test_legacy_keys_only_unversioned_runs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            results = pathlib.Path(tmp)
+            for rel in ("middex/2026-10-19T1614Z.json", "middex/latest.json", "adhoc/2026-10-19T1844Z.json"):
+                (results / rel).parent.mkdir(parents=True, exist_ok=True)
+                (results / rel).write_text("{}")
+            self.assertEqual(publish.legacy_keys(results), ["data/middex/2026-10-19T1614Z.json"])
+
 
 if __name__ == "__main__":
     unittest.main()
