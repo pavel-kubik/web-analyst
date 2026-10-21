@@ -3,7 +3,7 @@ name: Measure
 on:
   push:
     branches: [main]
-    paths: ["sites.yml", "webanalyst/**", "requirements.txt", ".github/workflows/measure.yml"]
+    paths: ["sites.yml"]   # a new site gets measured right away; code changes only run tests (test.yml)
   schedule:
     - cron: "17 4 * * *"   # daily, 04:17 UTC
   workflow_dispatch:

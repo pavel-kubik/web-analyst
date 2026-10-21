@@ -2,7 +2,7 @@
 
 Everything here comes from the measured website, so it is untrusted: every URL (sitemaps, redirects, pages) must pass
 `safe_url` (same site, http/https, no userinfo, backslashes or control characters) and is rebuilt from its parsed parts
-before use; downloads and gzip output are capped; documents with a DTD are rejected.
+before use; downloads, gzip output, sitemap count and error list are capped; documents with a DTD are rejected.
 """
 import time
 import urllib.parse
@@ -17,6 +17,7 @@ MAX_URLS = 300  # per domain, homepage included
 MAX_SITEMAPS = 50  # sitemap files fetched per domain
 MAX_SITEMAP_BYTES = 20 * 1024 * 1024
 MAX_REDIRECTS = 5
+MAX_ERRORS = 50
 PAUSE_S = 1.0  # between sitemap fetches, same pacing as page measurements
 
 
@@ -78,6 +79,13 @@ def sitemaps_from_robots(text: str) -> list[str]:
     return out
 
 
+class _NoDoctype(ET.TreeBuilder):
+    """Called by the XML parser on <!DOCTYPE>, i.e. after decoding, so encoding tricks or padding can't hide it."""
+
+    def doctype(self, name, pubid, system):
+        raise SitemapError("DTD not allowed")
+
+
 def parse_sitemap(data: bytes) -> tuple[list[str], list[str]]:
     """Return (child sitemaps, page URLs) from a sitemap index or urlset document (optionally gzipped)."""
     if data[:2] == b"\x1f\x8b":
@@ -85,9 +93,9 @@ def parse_sitemap(data: bytes) -> tuple[list[str], list[str]]:
         data = inflater.decompress(data, MAX_SITEMAP_BYTES + 1)  # output-capped: a gzip bomb stops here
         if len(data) > MAX_SITEMAP_BYTES or inflater.unconsumed_tail:
             raise SitemapError("larger than 20 MB unpacked")
-    if b"<!DOCTYPE" in data[:4096].upper():
-        raise SitemapError("DTD not allowed")
-    root = ET.fromstring(data)
+    parser = ET.XMLParser(target=_NoDoctype())
+    parser.feed(data)
+    root = parser.close()
     name = lambda el: el.tag.rsplit("}", 1)[-1]  # noqa: E731
     text = lambda el: (el.text or "").strip()  # noqa: E731
     if name(root) == "urlset":
@@ -119,15 +127,24 @@ def discover(domain: str, fetch=None, max_urls: int = MAX_URLS, pause_s: float =
             urls.append(safe)
         return True
 
+    skipped = 0
+
     def enqueue(candidates: list[str], base: str) -> None:
+        nonlocal skipped
         for c in candidates:
+            if len(known) >= MAX_SITEMAPS:
+                return
             safe = safe_url(urllib.parse.urljoin(base, c), home)
             if not safe:
-                errors.append(_error(c, SitemapError("skipped, not on this site")))
-            elif safe not in fetched and safe not in queue:
+                skipped += 1
+                if skipped <= MAX_ERRORS:
+                    errors.append(_error(c, SitemapError("skipped, not on this site")))
+            elif safe not in known:
+                known.add(safe)
                 queue.append(safe)
 
     queue: list[str] = []
+    known: set[str] = set()  # queued or fetched sitemaps
     robots = urllib.parse.urljoin(home, "/robots.txt")
     try:
         status, body = fetch(robots)
@@ -137,6 +154,7 @@ def discover(domain: str, fetch=None, max_urls: int = MAX_URLS, pause_s: float =
         errors.append(_error("robots.txt", exc))
     if not queue:
         queue = [urllib.parse.urljoin(home, "/sitemap.xml")]
+        known.add(queue[0])
 
     capped = False
     while queue and len(fetched) < MAX_SITEMAPS and not capped:
@@ -158,4 +176,6 @@ def discover(domain: str, fetch=None, max_urls: int = MAX_URLS, pause_s: float =
             if not add(page):
                 capped = True
                 break
-    return {"sitemaps": fetched, "urls": urls, "capped": capped, "errors": errors}
+    if skipped > MAX_ERRORS:
+        errors.append(f"…and {skipped - MAX_ERRORS} more sitemap URLs skipped, not on this site")
+    return {"sitemaps": fetched, "urls": urls, "capped": capped, "errors": errors[:MAX_ERRORS + 1]}

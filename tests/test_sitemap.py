@@ -92,8 +92,24 @@ class HostileSitemapTest(unittest.TestCase):
             sitemap.parse_sitemap(bomb)
 
     def test_dtd_rejected(self):
-        with self.assertRaises(sitemap.SitemapError):
-            sitemap.parse_sitemap(b'<?xml version="1.0"?><!DOCTYPE x [<!ENTITY a "aaaa">]><urlset/>')
+        doc = '<?xml version="1.0" encoding="%s"?>' + "<!-- pad -->" * 1000 + '<!DOCTYPE x [<!ENTITY a "aaaa">]><urlset/>'
+        for encoding in ("utf-8", "utf-16"):  # padding and UTF-16 hid it from a byte sniff
+            with self.assertRaises(sitemap.SitemapError, msg=encoding):
+                sitemap.parse_sitemap((doc % encoding).encode(encoding))
+
+    def test_huge_index_is_bounded(self):
+        locs = "".join(f"<sitemap><loc>https://www.example.cz/s{i}.xml</loc></sitemap>"
+                       f"<sitemap><loc>https://other{i}.example/s.xml</loc></sitemap>" for i in range(20000))
+        index = f'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{locs}</sitemapindex>'.encode()
+        requested = []
+
+        def fetch(url):
+            requested.append(url)
+            return (200, index) if url.endswith("/sitemap.xml") else (404, b"")
+
+        found = sitemap.discover(HOME, fetch=fetch, pause_s=0)
+        self.assertLessEqual(len(requested), sitemap.MAX_SITEMAPS + 1)  # + robots.txt
+        self.assertLessEqual(len(found["errors"]), sitemap.MAX_ERRORS + 1)
 
     def test_off_site_sitemaps_are_not_fetched(self):
         requested = []
