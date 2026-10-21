@@ -13,6 +13,7 @@ import pathlib
 import subprocess
 
 from .__main__ import DOCS, ROOT
+from .report import PRIVATE_SITES
 
 WRANGLER = "wrangler@4.144.0"
 DEFAULT_BUCKET = "web-analyst-data"
@@ -40,7 +41,8 @@ def plan(docs: pathlib.Path, runs: list[str] | None) -> list[tuple[str, pathlib.
     data = docs / "data"
     run_files = sorted(p.relative_to(data).as_posix() for p in data.glob("*/*.json")) if runs is None else runs
     items = [(f"data/{r}", data / r, "application/json", CACHE["run"]) for r in run_files if (data / r).exists()]
-    items += [(f"shots/{p.name}", p, "image/jpeg", CACHE["shot"]) for p in sorted((docs / "shots").glob("*.jpg"))]
+    items += [(f"shots/{p.name}", p, "image/jpeg", CACHE["shot"]) for p in sorted((docs / "shots").glob("*.jpg"))
+              if p.name.split("-", 1)[0] not in PRIVATE_SITES]
     # Manifest last: it only lists runs whose files are already uploaded.
     items.append(("data/manifest.json", data / "manifest.json", "application/json", CACHE["manifest"]))
     return items

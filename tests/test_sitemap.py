@@ -58,5 +58,99 @@ class SitemapTest(unittest.TestCase):
         self.assertIn("https://www.example.cz/kontakt/", pages)
 
 
+HOME = "https://www.example.cz/"
+
+
+class SafeUrlTest(unittest.TestCase):
+    def test_accepts_same_site_and_rebuilds(self):
+        self.assertEqual(sitemap.safe_url("https://example.cz/a?b=1#frag", HOME), "https://example.cz/a?b=1")
+        self.assertEqual(sitemap.safe_url("HTTPS://WWW.EXAMPLE.CZ", HOME), "https://www.example.cz/")
+
+    def test_rejects_hostile_urls(self):
+        for url in (
+            "https://evil.example\\@www.example.cz/",  # browser: host evil.example
+            "https://evil.example\\www.example.cz/",
+            "https://user@www.example.cz/",
+            "https://www.example.cz:8443/",
+            "https://www.example.cz.evil.example/",
+            "javascript:alert(1)",
+            "file:///etc/passwd",
+            "http://169.254.169.254/latest/meta-data/",
+            "https://www.example.cz/\tx",
+            "https://www.example.cz/a b",
+            "https://[::1/",
+        ):
+            self.assertIsNone(sitemap.safe_url(url, HOME), url)
+
+
+class HostileSitemapTest(unittest.TestCase):
+    def test_gzip_bomb_is_capped(self):
+        import gzip
+        bomb = gzip.compress(b"<urlset>" + b" " * (sitemap.MAX_SITEMAP_BYTES + 1024))
+        self.assertLess(len(bomb), 100_000)
+        with self.assertRaises(sitemap.SitemapError):
+            sitemap.parse_sitemap(bomb)
+
+    def test_dtd_rejected(self):
+        with self.assertRaises(sitemap.SitemapError):
+            sitemap.parse_sitemap(b'<?xml version="1.0"?><!DOCTYPE x [<!ENTITY a "aaaa">]><urlset/>')
+
+    def test_off_site_sitemaps_are_not_fetched(self):
+        requested = []
+        files = {"https://www.example.cz/robots.txt": b"Sitemap: http://169.254.169.254/sitemap.xml\nSitemap: https://www.example.cz/s.xml",
+                 "https://www.example.cz/s.xml": b'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                                                 b"<sitemap><loc>https://internal.corp/x.xml</loc></sitemap></sitemapindex>"}
+
+        def fetch(url):
+            requested.append(url)
+            return (200, files[url]) if url in files else (404, b"")
+
+        found = sitemap.discover(HOME, fetch=fetch, pause_s=0)
+        self.assertEqual(requested, ["https://www.example.cz/robots.txt", "https://www.example.cz/s.xml"])
+        self.assertEqual(len([e for e in found["errors"] if "not on this site" in e]), 2)
+
+    def test_hostile_page_urls_dropped(self):
+        files = {"https://www.example.cz/robots.txt": b"",
+                 "https://www.example.cz/sitemap.xml": b'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 b"<url><loc>https://evil.example\\@www.example.cz/</loc></url>"
+                 b"<url><loc>https://www.example.cz/ok/</loc></url></urlset>"}
+        found = sitemap.discover(HOME, fetch=lambda u: (200, files[u]) if u in files else (404, b""), pause_s=0)
+        self.assertEqual(found["urls"], [HOME, "https://www.example.cz/ok/"])
+
+    def test_errors_hide_exception_text(self):
+        def fetch(url):
+            raise ConnectionError("secret internal detail")
+        found = sitemap.discover(HOME, fetch=fetch, pause_s=0)
+        self.assertTrue(found["errors"])
+        self.assertFalse(any("secret" in e for e in found["errors"]))
+
+
+class FakeResponse:
+    def __init__(self, status, body=b"", location=None):
+        self.status_code, self._body, self.headers = status, body, {"location": location} if location else {}
+
+    def iter_content(self, size):
+        for i in range(0, len(self._body), size):
+            yield self._body[i:i + size]
+
+    def close(self):
+        pass
+
+
+class FetchTest(unittest.TestCase):
+    def test_follows_same_site_redirect_only(self):
+        responses = {"https://example.cz/s.xml": FakeResponse(301, location="https://www.example.cz/s.xml"),
+                     "https://www.example.cz/s.xml": FakeResponse(200, b"<urlset/>")}
+        self.assertEqual(sitemap._fetch("https://example.cz/s.xml", HOME, get=lambda u, **kw: responses[u]), (200, b"<urlset/>"))
+        evil = lambda u, **kw: FakeResponse(302, location="http://169.254.169.254/")  # noqa: E731
+        with self.assertRaises(sitemap.SitemapError):
+            sitemap._fetch("https://www.example.cz/s.xml", HOME, get=evil)
+
+    def test_body_capped(self):
+        big = FakeResponse(200, b"x" * (sitemap.MAX_SITEMAP_BYTES + 1))
+        with self.assertRaises(sitemap.SitemapError):
+            sitemap._fetch("https://www.example.cz/s.xml", HOME, get=lambda u, **kw: big)
+
+
 if __name__ == "__main__":
     unittest.main()

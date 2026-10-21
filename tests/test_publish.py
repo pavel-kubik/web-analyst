@@ -18,7 +18,8 @@ class PublishTest(unittest.TestCase):
     def test_plan_uploads_runs_shots_then_manifest(self):
         with tempfile.TemporaryDirectory() as tmp:
             docs = pathlib.Path(tmp)
-            for rel in ("data/manifest.json", "data/middex/old.json", "data/middex/new.json", "shots/middex-0-chromium-cold-final.jpg"):
+            for rel in ("data/manifest.json", "data/middex/old.json", "data/middex/new.json", "shots/middex-0-chromium-cold-final.jpg",
+                        "shots/adhoc-0-firefox-cold-final.jpg"):
                 (docs / rel).parent.mkdir(parents=True, exist_ok=True)
                 (docs / rel).write_text("x")
             keys = [k for k, *_ in publish.plan(docs, ["middex/new.json"])]
