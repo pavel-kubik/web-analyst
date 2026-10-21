@@ -2,6 +2,9 @@
 
 - ⚠️ **Move dashboard data off `r2.dev`** (do first): r2.dev is rate-limited and not meant for production.
   Connect a custom domain to the `web-analyst-data` bucket, update CORS and `<meta name="data-base">` in `docs/index.html`.
+- **Separate Cloudflare account from firmometr**: web-analyst shares account `584a900cab287c4bc9a4c681a6e808a4`.
+  The R2 API token (*Workers R2 Storage → Edit*) can write to every bucket in the account, including firmometr's.
+  Options: own Cloudflare account, or a bucket-scoped R2 S3 access key + S3 client in `webanalyst/publish.py`.
 - **Revisit probe tiers** once real robots.txt / sitemap data is in: which pages deserve the full profile set,
   UA rotation per run, page sharding, more runs per day during an incident (`TIERS` in `webanalyst/__main__.py`).
 - **HAR capture** – decide bodies vs metadata only and where to store it (not git).
