@@ -41,7 +41,7 @@ class SlimRunTest(unittest.TestCase):
             manifest = json.loads((docs / "data" / "manifest.json").read_text())
             self.assertEqual(manifest["version"], report.VERSION)
             runs = manifest["sites"][0]["runs"]
-            self.assertEqual([r["path"] for r in runs], ["data/middex/2026-10-19T1614Z.json"])
+            self.assertEqual([r["path"] for r in runs], [f"data/v{report.VERSION}/middex/2026-10-19T1614Z.json"])
             self.assertTrue((docs / runs[0]["path"]).exists())
 
     def test_adhoc_runs_are_not_exported(self):
@@ -53,7 +53,7 @@ class SlimRunTest(unittest.TestCase):
             report.build(results, docs)
             manifest = json.loads((docs / "data" / "manifest.json").read_text())
             self.assertEqual([s["id"] for s in manifest["sites"]], ["middex"])
-            self.assertFalse((docs / "data" / "adhoc").exists())
+            self.assertFalse((docs / report.run_dir() / "adhoc").exists())
 
 
 if __name__ == "__main__":

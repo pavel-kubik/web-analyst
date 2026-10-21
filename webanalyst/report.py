@@ -8,7 +8,7 @@ import json
 import pathlib
 import shutil
 
-VERSION = 1
+VERSION = 1  # bump on any change to the run-file format: files move to data/v<N>/ (see runbooks/data-version-upgrade.md)
 PRIVATE_SITES = {"adhoc"}  # one-off --url checks: job summary / artifact only, never on the public dashboard
 PERF_KEYS = ("ttfb_ms", "fcp_ms", "dom_content_loaded_ms", "load_ms", "lcp_ms", "cls", "resource_count", "page_bytes")
 
@@ -78,6 +78,11 @@ def slim_run(raw: dict) -> dict:
     }
 
 
+def run_dir() -> str:
+    """Run files live under a versioned prefix, so cached files of an older format are never mixed in."""
+    return f"data/v{VERSION}"
+
+
 def build(results: pathlib.Path, docs: pathlib.Path) -> None:
     data_dir = docs / "data"
     if data_dir.exists():
@@ -87,7 +92,7 @@ def build(results: pathlib.Path, docs: pathlib.Path) -> None:
         runs = []
         for f in sorted(p for p in site_dir.glob("*.json") if p.name != "latest.json"):
             slim = slim_run(json.loads(f.read_text()))
-            rel = f"data/{site_dir.name}/{f.name}"
+            rel = f"{run_dir()}/{site_dir.name}/{f.name}"
             (docs / rel).parent.mkdir(parents=True, exist_ok=True)
             (docs / rel).write_text(json.dumps(slim, ensure_ascii=False, separators=(",", ":")))
             runs.append({"at": slim["measured_at"], "path": rel})

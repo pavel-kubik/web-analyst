@@ -4,7 +4,7 @@
     python -m webanalyst.publish --all       # backfill every run
     python -m webanalyst.publish --dry-run   # print what would be uploaded
 
-R2 keys mirror docs/ (data/..., shots/...), so the dashboard reads the same paths locally and from R2.
+R2 keys mirror docs/ (data/manifest.json, data/v<N>/<site>/<stamp>.json, shots/...), so the dashboard reads the same paths locally and from R2.
 Needs CLOUDFLARE_API_TOKEN (R2 edit on the bucket) and CLOUDFLARE_ACCOUNT_ID; bucket from R2_BUCKET.
 """
 import argparse
@@ -13,7 +13,7 @@ import pathlib
 import subprocess
 
 from .__main__ import DOCS, ROOT
-from .report import PRIVATE_SITES
+from .report import PRIVATE_SITES, run_dir
 
 WRANGLER = "wrangler@4.144.0"
 DEFAULT_BUCKET = "web-analyst-data"
@@ -37,10 +37,10 @@ def new_run_files(porcelain: str) -> list[str]:
 
 
 def plan(docs: pathlib.Path, runs: list[str] | None) -> list[tuple[str, pathlib.Path, str, str]]:
-    """(key, local file, content type, cache control); runs=None means every run."""
-    data = docs / "data"
-    run_files = sorted(p.relative_to(data).as_posix() for p in data.glob("*/*.json")) if runs is None else runs
-    items = [(f"data/{r}", data / r, "application/json", CACHE["run"]) for r in run_files if (data / r).exists()]
+    """(key, local file, content type, cache control); runs=None means every run of the current format version."""
+    data, run_root = docs / "data", docs / run_dir()
+    run_files = sorted(p.relative_to(run_root).as_posix() for p in run_root.glob("*/*.json")) if runs is None else runs
+    items = [(f"{run_dir()}/{r}", run_root / r, "application/json", CACHE["run"]) for r in run_files if (run_root / r).exists()]
     items += [(f"shots/{p.name}", p, "image/jpeg", CACHE["shot"]) for p in sorted((docs / "shots").glob("*.jpg"))
               if p.name.split("-", 1)[0] not in PRIVATE_SITES]
     # Manifest last: it only lists runs whose files are already uploaded.
