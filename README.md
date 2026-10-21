@@ -27,7 +27,9 @@ The frontend in `docs/` (`index.html`, `app.js`, `trends.js`, Chart.js from cdnj
 straight from the repo. Measurement data lives in the R2 bucket `web-analyst-data`; the page reads it from the URL
 in `<meta name="data-base">`. Each run exports header-free data to `docs/data/` (`manifest.json` + one file per run,
 regenerated from `results/`) and uploads only the new run, the manifest and the latest screenshots
-(`python -m webanalyst.publish`; `--all` backfills history, `--dry-run` lists keys).
+(`python -m webanalyst.publish`; `--all` backfills history, `--dry-run` lists keys). Run files are versioned
+(`data/v<N>/…`) and cached for a year; changing their format follows
+[runbooks/data-version-upgrade.md](runbooks/data-version-upgrade.md).
 
 The browser computes the trends:
 

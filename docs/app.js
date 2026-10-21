@@ -16,17 +16,34 @@ const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(
 const fmt = (v, digits = 2) => (v == null ? "–" : Number(v).toFixed(digits));
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
-async function loadRun(path) {
-  if (!runCache.has(path)) runCache.set(path, fetch(BASE + path).then((r) => r.json()));
+// Data format versions this page can read (manifest.version; run files live under data/v<N>/).
+const SUPPORTED_VERSIONS = [1];
+
+async function getJson(url, options) {
+  const r = await fetch(url, options);
+  if (!r.ok) throw new Error(`${url.replace(BASE, "")}: HTTP ${r.status}`);
+  return r.json();
+}
+
+function loadRun(path) {
+  if (!runCache.has(path)) runCache.set(path, getJson(BASE + path).catch((err) => { runCache.delete(path); throw err; }));
   return runCache.get(path);
 }
 
+/** Sites with the runs in the window. A run file that fails to load is skipped and counted; only the manifest is required. */
 async function loadSites() {
-  const manifest = await (await fetch(BASE + "data/manifest.json", { cache: "no-store" })).json();
+  const manifest = await getJson(BASE + "data/manifest.json", { cache: "no-store" });
+  if (!SUPPORTED_VERSIONS.includes(manifest.version)) {
+    throw new Error(`data format v${manifest.version} is not supported by this page (expects v${SUPPORTED_VERSIONS.join(", v")}) – an upgrade is probably in progress`);
+  }
   const days = Number(daysSel.value);
-  return Promise.all(
-    manifest.sites.map(async (site) => ({ ...site, runs: await Promise.all(runsInWindow(site.runs, days).map((r) => loadRun(r.path))) })),
-  );
+  let failed = 0;
+  const sites = await Promise.all(manifest.sites.map(async (site) => {
+    const settled = await Promise.allSettled(runsInWindow(site.runs, days).map((r) => loadRun(r.path)));
+    failed += settled.filter((r) => r.status === "rejected").length;
+    return { ...site, runs: settled.filter((r) => r.status === "fulfilled").map((r) => r.value) };
+  }));
+  return { sites, failed };
 }
 
 function chart(canvas, type, labels, datasets, yTitle) {
@@ -160,10 +177,11 @@ async function render() {
   charts.forEach((c) => c.destroy());
   charts = [];
   try {
-    const sites = await loadSites();
+    const { sites, failed } = await loadSites();
     const id = new URLSearchParams(location.hash.slice(1)).get("site");
     const site = id && sites.find((s) => s.id === id);
     site ? renderSite(site) : renderOverview(sites);
+    if (failed) app.insertAdjacentHTML("afterbegin", `<p class="muted WARN">${failed} measurement run(s) could not be loaded and are left out.</p>`);
   } catch (err) {
     app.innerHTML = `<p class="FAIL">Could not load data: ${esc(err.message)}</p>`;
   }
