@@ -3,6 +3,7 @@
     python -m webanalyst.publish             # runs that are new in results/ since the last commit
     python -m webanalyst.publish --all       # backfill every run
     python -m webanalyst.publish --dry-run   # print what would be uploaded
+    python -m webanalyst.publish --delete-legacy   # remove pre-versioning data/<site>/<stamp>.json objects
 
 R2 keys mirror docs/ (data/manifest.json, data/v<N>/<site>/<stamp>.json, shots/...), so the dashboard reads the same paths locally and from R2.
 Needs CLOUDFLARE_API_TOKEN (R2 edit on the bucket) and CLOUDFLARE_ACCOUNT_ID; bucket from R2_BUCKET.
@@ -12,7 +13,7 @@ import os
 import pathlib
 import subprocess
 
-from .__main__ import DOCS, ROOT
+from .__main__ import DOCS, RESULTS, ROOT
 from .report import PRIVATE_SITES, run_dir
 
 WRANGLER = "wrangler@4.144.0"
@@ -48,9 +49,23 @@ def plan(docs: pathlib.Path, runs: list[str] | None) -> list[tuple[str, pathlib.
     return items
 
 
+def legacy_keys(results: pathlib.Path) -> list[str]:
+    """Keys of the unversioned layout used before data/v<N>/ (one per run in results/); nothing else is touched."""
+    return sorted(
+        f"data/{f.parent.name}/{f.name}"
+        for f in results.glob("*/*.json")
+        if f.name != "latest.json" and f.parent.name not in PRIVATE_SITES
+    )
+
+
+def _wrangler(*args: str, check: bool = True) -> subprocess.CompletedProcess:
+    return subprocess.run(["npx", "--yes", WRANGLER, "r2", "object", *args, "--remote"], check=check)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="upload every run (backfill)")
+    ap.add_argument("--delete-legacy", action="store_true", help="delete pre-versioning run objects after uploading")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -63,8 +78,12 @@ def main() -> None:
     for key, path, content_type, cache in plan(DOCS, runs):
         print(f"{bucket}/{key}")
         if not args.dry_run:
-            subprocess.run(["npx", "--yes", WRANGLER, "r2", "object", "put", f"{bucket}/{key}", "--remote",
-                            "--file", str(path), "--content-type", content_type, "--cache-control", cache], check=True)
+            _wrangler("put", f"{bucket}/{key}", "--file", str(path), "--content-type", content_type, "--cache-control", cache)
+    if args.delete_legacy:
+        for key in legacy_keys(RESULTS):
+            print(f"delete {bucket}/{key}")
+            if not args.dry_run:
+                _wrangler("delete", f"{bucket}/{key}", check=False)  # already gone is fine
 
 
 if __name__ == "__main__":
