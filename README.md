@@ -31,11 +31,20 @@ regenerated from `results/`) and uploads only the new run, the manifest and the 
 (`data/v<N>/…`) and cached for a year; changing their format follows
 [runbooks/data-version-upgrade.md](runbooks/data-version-upgrade.md).
 
-The browser computes the trends:
+The browser computes everything from the run files (`docs/trends.js`, pure functions with tests):
 
-- status counts per page (2xx / 3xx / 4xx / 5xx / error, from the `chrome` HTTP probe),
+- **Overview**: a health banner (FAIL / WARN counts, verdict changes since the previous run), "worth a look" cards
+  for pages past Google's limits that don't fail the verdict (CLS > 0.1, LCP > 2.5 s, TTFB > 0.8 s, console
+  errors), a card per site with P90 tiles, trend and its top 3 issues, and recent verdict / page-count changes.
+- **Site page** (`#site=<id>`, `&page=<path>` selects a page): P90 tiles, "needs attention" rankings (slowest
+  content / TTFB / LCP, heaviest, layout shift, regressed = latest > 1.5 × the page's own P90, console errors),
+  trend charts, and a filterable, sortable page table with cells coloured against the limits; a side panel shows
+  the selected page's verdict per run, latency history, metrics and screenshots.
+- Status share per page (2xx / 3xx / 4xx / 5xx / error, from the `chrome` HTTP probe) as a percentage, so a growing
+  sitemap doesn't look like a traffic swing.
 - HTTP TTFB and browser time-to-content: mean and P90 per day or week. Only 2xx responses with real content
-  count (no browser-check pages, errors or stuck loads); the excluded share is shown under each chart.
+  count (no browser-check pages, errors or stuck loads); the excluded share is shown under each chart. Charts
+  with fewer than 3 points show a note instead.
 
 Preview locally (empty `data-base` = same origin): `python -m webanalyst --report-only && python -m http.server -d docs`
 → http://localhost:8000.
