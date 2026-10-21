@@ -1,8 +1,7 @@
-# Sites measured by the scheduled workflow.
-# id: short slug used for result folders; urls: landing pages to test (e.g. Google Ads final URLs).
+# Domains measured by the scheduled workflow.
+# id: short slug used for result folders; domain: canonical origin. Pages come from its robots.txt / sitemap.xml;
+# the homepage gets the full probe set, every other page the light one (see TIERS in webanalyst/__main__.py).
 sites:
   - id: middex
     name: "middex.cz"
-    urls:
-      - https://middex.cz/
-      - https://www.middex.cz/
+    domain: https://www.middex.cz

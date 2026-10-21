@@ -55,5 +55,5 @@ def probe(url: str, ua_name: str, timeout: float = 30.0) -> dict:
     }
 
 
-def probe_all(url: str) -> list[dict]:
-    return [probe(url, ua) for ua in USER_AGENTS]
+def probe_all(url: str, ua_names: list[str] | None = None) -> list[dict]:
+    return [probe(url, ua) for ua in (ua_names or USER_AGENTS)]

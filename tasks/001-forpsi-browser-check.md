@@ -1,7 +1,8 @@
 # 001 – FORPSI „kontrola prohlížeče“ → Google Ads zamítá reklamy (nefunkční cíl)
 
 **Nahlášeno:** 2026-10-19, PPC specialistka (externí agentura)
-**Stav:** potvrzeno měřením 2026-10-19 (middex.cz → HTTP 429 / 403 z FORPSI proxy) – čeká na FORPSI podporu
+**Stav:** ✅ vyřešeno (2026-10-21) – od 2026-10-19 22:23 UTC měření bez 429/403, výpadek už nenastává.
+Původně potvrzeno měřením 2026-10-19 (middex.cz → HTTP 429 / 403 z FORPSI proxy).
 
 ## Symptom (z e-mailu)
 
