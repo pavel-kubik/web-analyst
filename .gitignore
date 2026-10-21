@@ -5,3 +5,5 @@ node_modules/
 # Generated on every run and deployed to Cloudflare Pages, not committed
 docs/data/
 docs/shots/
+# One-off --url checks (see PRIVATE_SITES in webanalyst/report.py)
+results/adhoc/

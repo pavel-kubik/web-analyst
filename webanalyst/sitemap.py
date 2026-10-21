@@ -1,8 +1,13 @@
-"""Discover a domain's pages: robots.txt -> sitemap index -> child sitemaps."""
-import gzip
+"""Discover a domain's pages: robots.txt -> sitemap index -> child sitemaps.
+
+Everything here comes from the measured website, so it is untrusted: every URL (sitemaps, redirects, pages) must pass
+`safe_url` (same site, http/https, no userinfo, backslashes or control characters) and is rebuilt from its parsed parts
+before use; downloads and gzip output are capped; documents with a DTD are rejected.
+"""
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
+import zlib
 
 import requests
 
@@ -11,17 +16,56 @@ from .http_probe import USER_AGENTS
 MAX_URLS = 300  # per domain, homepage included
 MAX_SITEMAPS = 50  # sitemap files fetched per domain
 MAX_SITEMAP_BYTES = 20 * 1024 * 1024
+MAX_REDIRECTS = 5
 PAUSE_S = 1.0  # between sitemap fetches, same pacing as page measurements
 
 
-def _fetch(url: str) -> tuple[int, bytes]:
-    resp = requests.get(url, headers={"User-Agent": USER_AGENTS["chrome"]}, timeout=30)
-    return resp.status_code, resp.content[:MAX_SITEMAP_BYTES]
+class SitemapError(Exception):
+    """A problem worth showing in the public discovery errors (message contains no response data)."""
 
 
-def _host(url: str) -> str:
-    host = urllib.parse.urlsplit(url).hostname or ""
+def _site(host: str) -> str:
     return host[4:] if host.startswith("www.") else host
+
+
+def safe_url(url: str, home: str) -> str | None:
+    """`url` rebuilt from its parts if it is an http(s) URL on the same site and port as `home`, else None."""
+    url = (url or "").strip()
+    if not url or "\\" in url or any(ord(c) < 0x21 or ord(c) == 0x7F for c in url):
+        return None  # browsers read "\" as "/", so Python and the browser could disagree on the host
+    try:
+        parts, base = urllib.parse.urlsplit(url), urllib.parse.urlsplit(home)
+        port, base_port = parts.port, base.port
+    except ValueError:  # malformed port / IPv6 literal
+        return None
+    if parts.scheme not in ("http", "https") or "@" in parts.netloc or not parts.hostname:
+        return None
+    if _site(parts.hostname) != _site(base.hostname or "") or port != base_port:
+        return None
+    netloc = parts.hostname + (f":{port}" if port else "")
+    return urllib.parse.urlunsplit((parts.scheme, netloc, parts.path or "/", parts.query, ""))
+
+
+def _fetch(url: str, home: str, get=requests.get) -> tuple[int, bytes]:
+    """GET with redirects followed only to safe URLs and the body capped at MAX_SITEMAP_BYTES."""
+    for _ in range(MAX_REDIRECTS + 1):
+        resp = get(url, headers={"User-Agent": USER_AGENTS["chrome"]}, timeout=30, stream=True, allow_redirects=False)
+        try:
+            if resp.status_code in (301, 302, 303, 307, 308):
+                target = safe_url(urllib.parse.urljoin(url, resp.headers.get("location", "")), home)
+                if not target:
+                    raise SitemapError("redirect to another site refused")
+                url = target
+                continue
+            body = bytearray()
+            for chunk in resp.iter_content(64 * 1024):
+                body += chunk
+                if len(body) > MAX_SITEMAP_BYTES:
+                    raise SitemapError("larger than 20 MB")
+            return resp.status_code, bytes(body)
+        finally:
+            resp.close()
+    raise SitemapError("too many redirects")
 
 
 def sitemaps_from_robots(text: str) -> list[str]:
@@ -37,55 +81,66 @@ def sitemaps_from_robots(text: str) -> list[str]:
 def parse_sitemap(data: bytes) -> tuple[list[str], list[str]]:
     """Return (child sitemaps, page URLs) from a sitemap index or urlset document (optionally gzipped)."""
     if data[:2] == b"\x1f\x8b":
-        data = gzip.decompress(data)[:MAX_SITEMAP_BYTES]
+        inflater = zlib.decompressobj(16 + zlib.MAX_WBITS)
+        data = inflater.decompress(data, MAX_SITEMAP_BYTES + 1)  # output-capped: a gzip bomb stops here
+        if len(data) > MAX_SITEMAP_BYTES or inflater.unconsumed_tail:
+            raise SitemapError("larger than 20 MB unpacked")
+    if b"<!DOCTYPE" in data[:4096].upper():
+        raise SitemapError("DTD not allowed")
     root = ET.fromstring(data)
-    kind = root.tag.rsplit("}", 1)[-1]
-    locs = [el.text.strip() for el in root.iter() if el.tag.rsplit("}", 1)[-1] == "loc" and el.text and el.text.strip()]
-    # In a urlset, <loc> inside <image:image> etc. is not a page; keep only direct <url><loc>.
-    if kind == "urlset":
-        locs = [
-            loc.text.strip()
-            for url in root
-            if url.tag.rsplit("}", 1)[-1] == "url"
-            for loc in url
-            if loc.tag.rsplit("}", 1)[-1] == "loc" and loc.text and loc.text.strip()
-        ]
-        return [], locs
-    if kind == "sitemapindex":
-        return locs, []
+    name = lambda el: el.tag.rsplit("}", 1)[-1]  # noqa: E731
+    text = lambda el: (el.text or "").strip()  # noqa: E731
+    if name(root) == "urlset":
+        # Only direct <url><loc>; <image:loc> etc. are not pages.
+        return [], [text(loc) for url in root if name(url) == "url" for loc in url if name(loc) == "loc" and text(loc)]
+    if name(root) == "sitemapindex":
+        return [text(loc) for sm in root if name(sm) == "sitemap" for loc in sm if name(loc) == "loc" and text(loc)], []
     return [], []
 
 
-def discover(domain: str, fetch=_fetch, max_urls: int = MAX_URLS, pause_s: float = PAUSE_S) -> dict:
-    """Homepage first, then same-host pages from the domain's sitemaps (www. and bare host are treated as one)."""
+def _error(where: str, exc: Exception) -> str:
+    """Public error text: our own SitemapError message, otherwise only the exception type."""
+    return f"{where[:200]}: {exc if isinstance(exc, SitemapError) else type(exc).__name__}"
+
+
+def discover(domain: str, fetch=None, max_urls: int = MAX_URLS, pause_s: float = PAUSE_S) -> dict:
+    """Homepage first, then same-site pages from the domain's sitemaps (www. and bare host are treated as one)."""
     home = domain.rstrip("/") + "/"
-    host = _host(home)
+    fetch = fetch or (lambda url: _fetch(url, home))
     urls, errors, fetched = [home], [], []
     seen = {home}
 
     def add(url: str) -> bool:
         if len(urls) >= max_urls:
             return False
-        if _host(url) == host and url not in seen:
-            seen.add(url)
-            urls.append(url)
+        safe = safe_url(url, home)
+        if safe and safe not in seen:
+            seen.add(safe)
+            urls.append(safe)
         return True
 
-    queue = []
+    def enqueue(candidates: list[str], base: str) -> None:
+        for c in candidates:
+            safe = safe_url(urllib.parse.urljoin(base, c), home)
+            if not safe:
+                errors.append(_error(c, SitemapError("skipped, not on this site")))
+            elif safe not in fetched and safe not in queue:
+                queue.append(safe)
+
+    queue: list[str] = []
+    robots = urllib.parse.urljoin(home, "/robots.txt")
     try:
-        status, body = fetch(urllib.parse.urljoin(home, "/robots.txt"))
+        status, body = fetch(robots)
         if status == 200:
-            queue = sitemaps_from_robots(body.decode("utf-8", "replace"))
+            enqueue(sitemaps_from_robots(body.decode("utf-8", "replace")), home)
     except Exception as exc:
-        errors.append(f"robots.txt: {type(exc).__name__}: {exc}")
+        errors.append(_error("robots.txt", exc))
     if not queue:
         queue = [urllib.parse.urljoin(home, "/sitemap.xml")]
 
     capped = False
     while queue and len(fetched) < MAX_SITEMAPS and not capped:
         sm = queue.pop(0)
-        if sm in fetched:
-            continue
         if fetched and pause_s:
             time.sleep(pause_s)
         fetched.append(sm)
@@ -96,9 +151,9 @@ def discover(domain: str, fetch=_fetch, max_urls: int = MAX_URLS, pause_s: float
                 continue
             children, pages = parse_sitemap(body)
         except Exception as exc:
-            errors.append(f"{sm}: {type(exc).__name__}: {exc}")
+            errors.append(_error(sm, exc))
             continue
-        queue.extend(c for c in children if c not in fetched)
+        enqueue(children, sm)
         for page in pages:
             if not add(page):
                 capped = True

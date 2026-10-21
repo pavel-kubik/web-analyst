@@ -44,6 +44,17 @@ class SlimRunTest(unittest.TestCase):
             self.assertEqual([r["path"] for r in runs], ["data/middex/2026-10-19T1614Z.json"])
             self.assertTrue((docs / runs[0]["path"]).exists())
 
+    def test_adhoc_runs_are_not_exported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            results, docs = pathlib.Path(tmp, "results"), pathlib.Path(tmp, "docs")
+            for site in ("middex", "adhoc"):
+                (results / site).mkdir(parents=True)
+                (results / site / "2026-10-19T1614Z.json").write_text(json.dumps(self.raw | {"site": site}))
+            report.build(results, docs)
+            manifest = json.loads((docs / "data" / "manifest.json").read_text())
+            self.assertEqual([s["id"] for s in manifest["sites"]], ["middex"])
+            self.assertFalse((docs / "data" / "adhoc").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

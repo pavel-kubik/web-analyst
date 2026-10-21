@@ -9,6 +9,7 @@ import pathlib
 import shutil
 
 VERSION = 1
+PRIVATE_SITES = {"adhoc"}  # one-off --url checks: job summary / artifact only, never on the public dashboard
 PERF_KEYS = ("ttfb_ms", "fcp_ms", "dom_content_loaded_ms", "load_ms", "lcp_ms", "cls", "resource_count", "page_bytes")
 
 
@@ -82,7 +83,7 @@ def build(results: pathlib.Path, docs: pathlib.Path) -> None:
     if data_dir.exists():
         shutil.rmtree(data_dir)  # regenerated from results/ every time, so a replay covers all history
     sites = []
-    for site_dir in sorted(p for p in results.iterdir() if p.is_dir()) if results.exists() else []:
+    for site_dir in sorted(p for p in results.iterdir() if p.is_dir() and p.name not in PRIVATE_SITES) if results.exists() else []:
         runs = []
         for f in sorted(p for p in site_dir.glob("*.json") if p.name != "latest.json"):
             slim = slim_run(json.loads(f.read_text()))

@@ -45,7 +45,7 @@ pip install -r requirements.txt
 python -m playwright install --with-deps firefox chromium
 python -m webanalyst                       # all domains from sites.yml
 python -m webanalyst --max-urls 5          # quick run: homepage + 4 sitemap pages
-python -m webanalyst --url https://example.cz/landing   # ad-hoc, full probes, no discovery
+python -m webanalyst --url https://example.cz/landing   # ad-hoc check: full probes, not committed or published
 python -m webanalyst --no-browser          # HTTP probes only (fast)
 python -m webanalyst --report-only         # re-export docs/data from results/
 ```
