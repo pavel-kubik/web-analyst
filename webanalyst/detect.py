@@ -14,7 +14,8 @@ CHALLENGE_PATTERNS = [
     r"verify(ing)? (you are|that you are) (human|not a robot)",
     r"just a moment\.\.\.",
     r"ddos[- ]protection",
-    r"cf-chl|challenge-platform|__cf_chl",
+    # Not "challenge-platform": Cloudflare injects /cdn-cgi/challenge-platform/ scripts into normal pages too.
+    r"cf-chl|__cf_chl",
     r"sgcaptcha|sg-captcha",
     r"imunify360|bot-protection|botprotection",
     r"please (wait|enable javascript)",
