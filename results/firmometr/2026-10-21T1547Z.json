@@ -1,0 +1,399 @@
+{
+  "site": "firmometr",
+  "name": "firmometr.cz",
+  "domain": null,
+  "measured_at": "2026-10-21T15:47:53.523372+00:00",
+  "discovery": null,
+  "pages": [
+    {
+      "url": "https://firmometr.cz/",
+      "tier": "full",
+      "verdict": "FAIL",
+      "reasons": [
+        "HTTP[adsbot-google] got a browser-check page (challenge-platform)",
+        "HTTP[adsbot-google-mobile] got a browser-check page (challenge-platform)",
+        "Browser[chromium] stuck on browser-check page",
+        "Browser[firefox] stuck on browser-check page",
+        "Browser[chromium-adsbot-mobile] stuck on browser-check page",
+        "HTTP[googlebot] got a browser-check page (challenge-platform)",
+        "HTTP[firefox] got a browser-check page (challenge-platform)",
+        "HTTP[chrome] got a browser-check page (challenge-platform)"
+      ],
+      "http": [
+        {
+          "ua": "adsbot-google",
+          "url": "https://firmometr.cz/",
+          "final_url": "https://firmometr.cz/",
+          "status": 200,
+          "redirects": [],
+          "ttfb_s": 0.474,
+          "total_s": 0.475,
+          "headers": {
+            "cf-ray": "a4e17d47eeb77c10-EWR",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "cloudflare"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "challenge-platform"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": false,
+          "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+          "html_bytes": 114218,
+          "snippet": ""
+        },
+        {
+          "ua": "adsbot-google-mobile",
+          "url": "https://firmometr.cz/",
+          "final_url": "https://firmometr.cz/",
+          "status": 200,
+          "redirects": [],
+          "ttfb_s": 0.481,
+          "total_s": 0.482,
+          "headers": {
+            "cf-ray": "a4e17d4a2ac4e057-CLT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "cloudflare"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "challenge-platform"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": false,
+          "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+          "html_bytes": 114218,
+          "snippet": ""
+        },
+        {
+          "ua": "googlebot",
+          "url": "https://firmometr.cz/",
+          "final_url": "https://firmometr.cz/",
+          "status": 200,
+          "redirects": [],
+          "ttfb_s": 0.196,
+          "total_s": 0.197,
+          "headers": {
+            "cf-ray": "a4e17d4d4c9d732d-CLT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "cloudflare"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "challenge-platform"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": false,
+          "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+          "html_bytes": 114218,
+          "snippet": ""
+        },
+        {
+          "ua": "firefox",
+          "url": "https://firmometr.cz/",
+          "final_url": "https://firmometr.cz/",
+          "status": 200,
+          "redirects": [],
+          "ttfb_s": 0.198,
+          "total_s": 0.2,
+          "headers": {
+            "cf-ray": "a4e17d4e98045a52-CLT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "cloudflare"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "challenge-platform"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": false,
+          "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+          "html_bytes": 114218,
+          "snippet": ""
+        },
+        {
+          "ua": "chrome",
+          "url": "https://firmometr.cz/",
+          "final_url": "https://firmometr.cz/",
+          "status": 200,
+          "redirects": [],
+          "ttfb_s": 0.509,
+          "total_s": 0.51,
+          "headers": {
+            "cf-ray": "a4e17d4ffc5f576a-CLT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "cloudflare"
+          },
+          "cookies_set": [],
+          "is_challenge": true,
+          "matches": [
+            "challenge-platform"
+          ],
+          "meta_refresh": false,
+          "tiny_js_page": false,
+          "mentions_forpsi": false,
+          "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+          "html_bytes": 114218,
+          "snippet": ""
+        }
+      ],
+      "browser": [
+        {
+          "browser": "chromium",
+          "user_agent": "default",
+          "url": "https://firmometr.cz/",
+          "cold": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "challenge-platform"
+              ],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 253,
+              "fcp_ms": 336,
+              "dom_content_loaded_ms": 669,
+              "load_ms": 949,
+              "lcp_ms": 336,
+              "cls": 0.003,
+              "transfer_bytes": 18520,
+              "resource_count": 28,
+              "page_bytes": 768765
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "challenge_screenshot": "shots/firmometr-0-chromium-cold-challenge.jpg",
+            "final_screenshot": "shots/firmometr-0-chromium-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [
+            "cf_clearance"
+          ],
+          "warm": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": false,
+              "matches": [],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": false,
+            "time_to_real_content_s": 0.432,
+            "stuck_on_challenge": false,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 124,
+              "fcp_ms": 216,
+              "dom_content_loaded_ms": 324,
+              "load_ms": 404,
+              "lcp_ms": 216,
+              "cls": 0.003,
+              "transfer_bytes": 18150,
+              "resource_count": 26,
+              "page_bytes": 18750
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "final_screenshot": "shots/firmometr-0-chromium-warm-final.jpg"
+          },
+          "label": "chromium"
+        },
+        {
+          "browser": "firefox",
+          "user_agent": "default",
+          "url": "https://firmometr.cz/",
+          "cold": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "challenge-platform"
+              ],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 174,
+              "fcp_ms": 330,
+              "dom_content_loaded_ms": 652,
+              "load_ms": 1245,
+              "lcp_ms": 330,
+              "cls": null,
+              "transfer_bytes": 18598,
+              "resource_count": 36,
+              "page_bytes": 769421
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "challenge_screenshot": "shots/firmometr-0-firefox-cold-challenge.jpg",
+            "final_screenshot": "shots/firmometr-0-firefox-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [
+            "cf_clearance"
+          ],
+          "warm": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": false,
+              "matches": [],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": false,
+            "time_to_real_content_s": 0.547,
+            "stuck_on_challenge": false,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 86,
+              "fcp_ms": 180,
+              "dom_content_loaded_ms": 297,
+              "load_ms": 512,
+              "lcp_ms": 180,
+              "cls": null,
+              "transfer_bytes": 18198,
+              "resource_count": 33,
+              "page_bytes": 26984
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "final_screenshot": "shots/firmometr-0-firefox-warm-final.jpg"
+          },
+          "label": "firefox"
+        },
+        {
+          "browser": "chromium",
+          "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",
+          "url": "https://firmometr.cz/",
+          "cold": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": true,
+              "matches": [
+                "challenge-platform"
+              ],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": true,
+            "time_to_real_content_s": null,
+            "stuck_on_challenge": true,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 182,
+              "fcp_ms": 256,
+              "dom_content_loaded_ms": 459,
+              "load_ms": 728,
+              "lcp_ms": 256,
+              "cls": 0.003,
+              "transfer_bytes": 18520,
+              "resource_count": 29,
+              "page_bytes": 769095
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "challenge_screenshot": "shots/firmometr-0-chromium-adsbot-mobile-cold-challenge.jpg",
+            "final_screenshot": "shots/firmometr-0-chromium-adsbot-mobile-cold-final.jpg"
+          },
+          "cookies_after_first_visit": [
+            "cf_clearance"
+          ],
+          "warm": {
+            "first_status": 200,
+            "document_responses": [
+              {
+                "status": 200,
+                "url": "https://firmometr.cz/"
+              }
+            ],
+            "first_document": {
+              "is_challenge": false,
+              "matches": [],
+              "title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+              "mentions_forpsi": false
+            },
+            "challenge_seen": false,
+            "time_to_real_content_s": 0.461,
+            "stuck_on_challenge": false,
+            "final_status": 200,
+            "final_url": "https://firmometr.cz/",
+            "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
+            "perf": {
+              "ttfb_ms": 80,
+              "fcp_ms": 188,
+              "dom_content_loaded_ms": 283,
+              "load_ms": 383,
+              "lcp_ms": 188,
+              "cls": 0.003,
+              "transfer_bytes": 18148,
+              "resource_count": 26,
+              "page_bytes": 18748
+            },
+            "console_error_count": 0,
+            "console_errors": [],
+            "final_screenshot": "shots/firmometr-0-chromium-adsbot-mobile-warm-final.jpg"
+          },
+          "label": "chromium-adsbot-mobile"
+        }
+      ]
+    }
+  ]
+}
