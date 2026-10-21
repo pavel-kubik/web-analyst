@@ -6,36 +6,78 @@ anti-bot "checking your browser" interstitials, redirects, error codes and slow 
 
 ## What it measures
 
-For every URL in [`sites.yml`](sites.yml):
+Each domain in [`sites.yml`](sites.yml) is expanded into pages via its `robots.txt` → sitemap index → child sitemaps
+(same host only, max 300 pages, 1 s pause between pages). Probes are tiered:
 
-| Probe | What it simulates |
-|---|---|
-| Plain HTTP, fresh session, UAs `adsbot-google`, `adsbot-google-mobile`, `googlebot`, `firefox`, `chrome` | A crawler without JavaScript or cookies (how Google Ads checks the final URL). Records status, redirect chain, TTFB, title, `Server`/`Set-Cookie` headers and whether the HTML is a browser-check page. |
-| Real Firefox, empty profile (cold) + repeat visit (warm) | A first-time visitor like the one in the client's complaint. Measures *time until real content replaces the challenge*, TTFB, LCP, load, and saves screenshots. |
-| Real Chromium with AdsBot-Google-Mobile UA | Rendering crawler path. |
+| Tier | Pages | Probes |
+|---|---|---|
+| full | homepage | Plain HTTP with UAs `adsbot-google`, `adsbot-google-mobile`, `googlebot`, `firefox`, `chrome`; real Chromium, Firefox and Chromium with the AdsBot-Google-Mobile UA, each cold (empty profile) + warm (repeat visit), with screenshots |
+| light | every other sitemap page | Plain HTTP with `chrome` UA; real Chromium cold + warm |
 
-Verdict per URL: **FAIL** (AdsBot gets a challenge / error, or browser stays stuck),
+HTTP probes record status, redirect chain, TTFB, title and whether the HTML is a browser-check page.
+Browser probes record time until real content replaces a challenge, TTFB, FCP, LCP, CLS (Chromium only),
+load, request count, page weight and console errors.
+
+Verdict per page: **FAIL** (AdsBot gets a challenge / error, or browser stays stuck),
 **WARN** (challenge on first visit that clears, slow TTFB > 2 s or first content > 5 s), **OK**.
+
+## Dashboard
+
+The frontend in `docs/` (`index.html`, `app.js`, `trends.js`, Chart.js from cdnjs) is deployed by Cloudflare Pages
+straight from the repo. Measurement data lives in the R2 bucket `web-analyst-data`; the page reads it from the URL
+in `<meta name="data-base">`. Each run exports header-free data to `docs/data/` (`manifest.json` + one file per run,
+regenerated from `results/`) and uploads only the new run, the manifest and the latest screenshots
+(`python -m webanalyst.publish`; `--all` backfills history, `--dry-run` lists keys).
+
+The browser computes the trends:
+
+- status counts per page (2xx / 3xx / 4xx / 5xx / error, from the `chrome` HTTP probe),
+- HTTP TTFB and browser time-to-content: mean and P90 per day or week. Only 2xx responses with real content
+  count (no browser-check pages, errors or stuck loads); the excluded share is shown under each chart.
+
+Preview locally (empty `data-base` = same origin): `python -m webanalyst --report-only && python -m http.server -d docs`
+→ http://localhost:8000.
 
 ## Running
 
 ```bash
 pip install -r requirements.txt
 python -m playwright install --with-deps firefox chromium
-python -m webanalyst                       # all sites from sites.yml
-python -m webanalyst --url https://example.cz/landing   # ad-hoc
+python -m webanalyst                       # all domains from sites.yml
+python -m webanalyst --max-urls 5          # quick run: homepage + 4 sitemap pages
+python -m webanalyst --url https://example.cz/landing   # ad-hoc, full probes, no discovery
 python -m webanalyst --no-browser          # HTTP probes only (fast)
+python -m webanalyst --report-only         # re-export docs/data from results/
 ```
 
-Output: `results/<site>/<timestamp>.json` (history), `results/<site>/latest.json`,
-and a static report `docs/index.html` with screenshots in `docs/shots/`.
+Raw output: `results/<site>/<timestamp>.json` (history, committed) and `results/<site>/latest.json`.
+`docs/data/` and `docs/shots/` are generated and not committed.
+
+Tests: `python -m pytest` and `npm test` (Node's built-in test runner, no dependencies).
 
 ## Automation
 
-[`.github/workflows/measure.yml`](.github/workflows/measure.yml) runs every 3 hours and on demand
-(*Actions → Measure → Run workflow*, optionally with an ad-hoc URL). It commits results back to the repo,
-writes a verdict table to the job summary, and uploads `docs/` as the `report` artifact.
+[`.github/workflows/measure.yml`](.github/workflows/measure.yml) runs daily at 04:17 UTC and on demand
+(*Actions → Measure → Run workflow*, optionally with an ad-hoc URL). It runs the unit tests, measures,
+writes a verdict summary, uploads new data to R2 and commits `results/` back to the repo.
+
+### Cloudflare setup (once)
+
+1. **R2 bucket**: R2 → Create bucket `web-analyst-data`. Settings → Public access → *R2.dev subdomain* → Allow; note the
+   `https://pub-….r2.dev` URL. ⚠️ r2.dev is rate-limited and for prototypes only – see [TODO](tasks/TODO.md).
+2. **CORS** (bucket Settings → CORS policy):
+   ```json
+   [{"AllowedOrigins": ["https://web-analyst.pages.dev", "http://localhost:8000"], "AllowedMethods": ["GET", "HEAD"], "AllowedHeaders": ["*"], "MaxAgeSeconds": 3600}]
+   ```
+3. **Data URL**: put the r2.dev URL with a trailing slash into `<meta name="data-base" content="…">` in `docs/index.html` and commit.
+4. **API token**: My Profile → API Tokens → Create custom token: *Account → Workers R2 Storage → Edit*, limited to this
+   account. Add repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Until both exist the upload is skipped.
+5. **Backfill** existing history once: run `python -m webanalyst.publish --all` locally with both variables set.
+6. **Pages**: Workers & Pages → Create → Pages → *Connect to Git* → this repo only. Framework preset *None*, build command
+   empty (or `exit 0`), output directory `docs`. Then Settings → Builds → *Build watch paths*: include `docs/*`, so the
+   daily results commits don't trigger builds.
 
 ## Tasks
 
-- [001 – FORPSI browser check breaks Google Ads](tasks/001-forpsi-browser-check.md)
+- [001 – FORPSI browser check breaks Google Ads](tasks/001-forpsi-browser-check.md) (resolved)
+- [TODO / later](tasks/TODO.md)

@@ -1,0 +1,40 @@
+[
+  {
+    "version": 1, "site": "example", "name": "example.cz", "domain": "https://www.example.cz",
+    "measured_at": "2026-10-19T04:00:00+00:00",
+    "pages": [
+      {"url": "https://www.example.cz/", "tier": "full", "verdict": "FAIL", "reasons": ["HTTP[chrome] status 429"], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 429, "challenge": true, "ttfb_s": 0.1},
+        {"kind": "http", "profile": "adsbot-google", "status": 429, "challenge": true, "ttfb_s": 0.1},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 429, "stuck": true, "content_s": null}
+      ]},
+      {"url": "https://www.example.cz/kontakt/", "tier": "light", "verdict": "WARN", "reasons": [], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 200, "challenge": true, "ttfb_s": 0.2},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 200, "stuck": false, "content_s": 4.0}
+      ]},
+      {"url": "https://www.example.cz/sluzby/", "tier": "light", "verdict": "OK", "reasons": [], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 200, "challenge": false, "ttfb_s": 1.2},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 200, "stuck": false, "content_s": 3.0}
+      ]}
+    ]
+  },
+  {
+    "version": 1, "site": "example", "name": "example.cz", "domain": "https://www.example.cz",
+    "measured_at": "2026-10-20T04:00:00+00:00",
+    "pages": [
+      {"url": "https://www.example.cz/", "tier": "full", "verdict": "OK", "reasons": [], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 200, "challenge": false, "ttfb_s": 0.3},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 200, "stuck": false, "content_s": 1.0},
+        {"kind": "browser", "profile": "chromium", "visit": "warm", "status": 200, "stuck": false, "content_s": 0.2}
+      ]},
+      {"url": "https://www.example.cz/kontakt/", "tier": "light", "verdict": "OK", "reasons": [], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 200, "challenge": false, "ttfb_s": 0.6},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 200, "stuck": false, "content_s": 2.0}
+      ]},
+      {"url": "https://www.example.cz/sluzby/", "tier": "light", "verdict": "OK", "reasons": [], "samples": [
+        {"kind": "http", "profile": "chrome", "status": 200, "challenge": false, "ttfb_s": 0.9},
+        {"kind": "browser", "profile": "chromium", "visit": "cold", "status": 200, "stuck": false, "content_s": 3.0}
+      ]}
+    ]
+  }
+]

@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+node_modules/
+# Generated on every run and deployed to Cloudflare Pages, not committed
+docs/data/
+docs/shots/

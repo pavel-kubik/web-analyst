@@ -3,9 +3,18 @@ import json
 
 from .__main__ import RESULTS
 
-print("| Site | URL | Verdict | Reasons |\n|---|---|---|---|")
+MAX_ROWS = 50
+
 for latest in sorted(RESULTS.glob("*/latest.json")):
     data = json.loads(latest.read_text())
-    for p in data["pages"]:
-        icon = {"OK": "✅", "WARN": "⚠️", "FAIL": "❌"}[p["verdict"]]
-        print(f"| {data['name']} | {p['url']} | {icon} {p['verdict']} | {'<br>'.join(p['reasons']) or '–'} |")
+    counts = {v: sum(p["verdict"] == v for p in data["pages"]) for v in ("OK", "WARN", "FAIL")}
+    print(f"### {data['name']}: {len(data['pages'])} pages · ✅ {counts['OK']} · ⚠️ {counts['WARN']} · ❌ {counts['FAIL']}\n")
+    bad = [p for p in data["pages"] if p["verdict"] != "OK"]
+    if bad:
+        print("| URL | Verdict | Reasons |\n|---|---|---|")
+        for p in bad[:MAX_ROWS]:
+            icon = {"WARN": "⚠️", "FAIL": "❌"}[p["verdict"]]
+            print(f"| {p['url']} | {icon} {p['verdict']} | {'<br>'.join(p['reasons'])} |")
+        if len(bad) > MAX_ROWS:
+            print(f"\n…and {len(bad) - MAX_ROWS} more.")
+    print()
