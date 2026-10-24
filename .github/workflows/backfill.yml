@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   backfill:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]   # own VM (saves Actions minutes)
     timeout-minutes: 30
     environment: prod
     steps:

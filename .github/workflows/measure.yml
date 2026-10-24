@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   measure:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]   # own VM (saves Actions minutes)
     timeout-minutes: 60
     # Cloudflare credentials live in the prod environment: CLOUDFLARE_API_TOKEN (secret), CLOUDFLARE_ACCOUNT_ID (variable).
     environment: prod
@@ -40,7 +40,8 @@ jobs:
           pip install pytest
           python -m pytest -q
           npm test
-      - run: python -m playwright install --with-deps firefox chromium
+      # Browsers matching the pip Playwright version; a no-op once cached. System deps are preinstalled on the VM (no sudo).
+      - run: python -m playwright install firefox chromium
       - name: Run measurements
         env:
           ADHOC_URL: ${{ inputs.url }}

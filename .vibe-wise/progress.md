@@ -33,4 +33,9 @@
 ## Caching and data versioning (implemented 2026-10-21, pushed 7a14b0f)
 - Learner reasoning: diagnosed the cache masking with an incognito test; chose version-in-path over shorter max-age.
 - Delegated to AI ("take defaults"): tolerant loader (skip missing runs with note), manifest version check, runbook in runbooks/ (not public docs/). Learner accepts outages for now (no customers).
-- Open user action: run publish --all to fill data/v1/, then delete legacy data/middex/ prefix (runbook "First migration").
+- Migration done 2026-10-21 via new Backfill R2 workflow (prod env, delete_legacy=true): data/v1/ filled, legacy data/middex/* deleted; verified on mobile without cache.
+
+## Self-hosted runner (implemented 2026-10-24, not pushed)
+- Learner decision: move all jobs (measure, test, backfill) to own VM to save Actions minutes; VM already has Playwright and system deps. No hosted fallback.
+- Introduced (AI explained): hosted runners use Azure datacenter IPs, Google Ads checks from Google datacenter IPs, so a VM on a different network may see different anti-bot results; runners on a personal account are repo-scoped (the other service's runner can't serve this repo); runner can read the prod secret; `--with-deps` needs apt/sudo.
+- Changes: runs-on [self-hosted, linux]; dropped `--with-deps` from the Playwright install.

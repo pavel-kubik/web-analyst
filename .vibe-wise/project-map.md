@@ -45,6 +45,7 @@ results/<site>/<stamp>.json + latest.json ──▶ report.build ──▶ docs/
 - `pip install -r requirements.txt`; `python -m playwright install --with-deps firefox chromium`
 - `python -m webanalyst [--url U] [--no-browser] [--report-only]`
 - .github/workflows/measure.yml: runs on push to relevant paths, cron every 3 h, and manual dispatch; commits results/ and docs/ back to main and uploads docs/ as an artifact.
+- Runner (2026-10-24): all workflows run on VM vm-tools (Oracle Cloud), user runner, /home/runner/actions-runner-web-analyst, name oci, labels [self-hosted, linux]; shares the VM with the abeceda-hrou runner.
 
 - Hosting (implemented, not yet set up on Cloudflare): frontend docs/ on Cloudflare Pages via Git integration (watch paths docs/*); data in R2 bucket web-analyst-data via r2.dev, uploaded per run by webanalyst/publish.py (new runs from git status, manifest last, screenshots). Data public; custom domain is top TODO.
 - Trends (implemented): computed in browser from raw result JSON; landing = average + percentile latency and status-code counts; detail = per-URL latency. Data-delivery details unresolved.
