@@ -5,6 +5,11 @@ name: Backfill R2
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "auto = repo variable CI_RUNNER (self-hosted unless it is 'github')"
+        type: choice
+        options: [auto, github, self-hosted]
+        default: auto
       delete_legacy:
         description: "Also delete pre-versioning data/<site>/<stamp>.json objects"
         type: boolean
@@ -19,7 +24,10 @@ concurrency:
 
 jobs:
   backfill:
-    runs-on: [self-hosted, linux]   # own VM (saves Actions minutes)
+    # Self-hosted (OCI VM, see runbooks/self-hosted-runner.md) to save Actions minutes.
+    # Fallback to GitHub-hosted ubuntu-latest: repo variable CI_RUNNER=github (every run), or the
+    # `runner` input of a manual run. Unset or anything else → self-hosted.
+    runs-on: ${{ (inputs.runner == 'github' || (inputs.runner != 'self-hosted' && vars.CI_RUNNER == 'github')) && 'ubuntu-latest' || fromJSON('["self-hosted", "web-analyst"]') }}
     timeout-minutes: 30
     environment: prod
     steps:

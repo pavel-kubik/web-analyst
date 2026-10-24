@@ -8,6 +8,11 @@ on:
     - cron: "17 4 * * *"   # daily, 04:17 UTC
   workflow_dispatch:
     inputs:
+      runner:
+        description: "auto = repo variable CI_RUNNER (self-hosted unless it is 'github')"
+        type: choice
+        options: [auto, github, self-hosted]
+        default: auto
       url:
         description: "Ad-hoc URL to test instead of sites.yml (optional)"
         required: false
@@ -21,7 +26,10 @@ concurrency:
 
 jobs:
   measure:
-    runs-on: [self-hosted, linux]   # own VM (saves Actions minutes)
+    # Self-hosted (OCI VM, see runbooks/self-hosted-runner.md) to save Actions minutes.
+    # Fallback to GitHub-hosted ubuntu-latest: repo variable CI_RUNNER=github (every run), or the
+    # `runner` input of a manual run. Unset or anything else → self-hosted.
+    runs-on: ${{ (inputs.runner == 'github' || (inputs.runner != 'self-hosted' && vars.CI_RUNNER == 'github')) && 'ubuntu-latest' || fromJSON('["self-hosted", "web-analyst"]') }}
     timeout-minutes: 60
     # Cloudflare credentials live in the prod environment: CLOUDFLARE_API_TOKEN (secret), CLOUDFLARE_ACCOUNT_ID (variable).
     environment: prod
@@ -40,8 +48,12 @@ jobs:
           pip install pytest
           python -m pytest -q
           npm test
-      # Browsers matching the pip Playwright version; a no-op once cached. System deps are preinstalled on the VM (no sudo).
+      # Self-hosted runners have no passwordless sudo, so `--with-deps` (apt-get) fails there: install
+      # the system libraries once by hand (runbooks/self-hosted-runner.md), CI only downloads the browsers.
+      - run: python -m playwright install --with-deps firefox chromium
+        if: runner.environment == 'github-hosted'
       - run: python -m playwright install firefox chromium
+        if: runner.environment == 'self-hosted'
       - name: Run measurements
         env:
           ADHOC_URL: ${{ inputs.url }}

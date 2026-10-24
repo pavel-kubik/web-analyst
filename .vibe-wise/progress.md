@@ -35,7 +35,11 @@
 - Delegated to AI ("take defaults"): tolerant loader (skip missing runs with note), manifest version check, runbook in runbooks/ (not public docs/). Learner accepts outages for now (no customers).
 - Migration done 2026-10-21 via new Backfill R2 workflow (prod env, delete_legacy=true): data/v1/ filled, legacy data/middex/* deleted; verified on mobile without cache.
 
-## Self-hosted runner (implemented 2026-10-24, not pushed)
+## Self-hosted runner (implemented 2026-10-24, pushed e693fb8)
 - Learner decision: move all jobs (measure, test, backfill) to own VM to save Actions minutes; VM already has Playwright and system deps. No hosted fallback.
 - Introduced (AI explained): hosted runners use Azure datacenter IPs, Google Ads checks from Google datacenter IPs, so a VM on a different network may see different anti-bot results; runners on a personal account are repo-scoped (the other service's runner can't serve this repo); runner can read the prod secret; `--with-deps` needs apt/sudo.
 - Changes: runs-on [self-hosted, linux]; dropped `--with-deps` from the Playwright install.
+- Runner `oci` on vm-tools, user `runner` (shared with abeceda-hrou; learner accepted since both repos private). Test run on push succeeded on `oci`.
+- Context: the 2026-10-24 scheduled Measure on ubuntu-latest never started (billing/spending limit), confirming the minutes motive.
+- Runner selection (2026-10-24, not committed): copied abeceda-hrou pattern on learner request: default self-hosted `[self-hosted, web-analyst]` (label added to `oci` via API), repo variable CI_RUNNER=github or manual `runner` input → ubuntu-latest; split Playwright install by runner.environment.
+- Found: VM is OCI E2.1.Micro (1 GB RAM, 59.5% steal); 15:12 Measure run on VM was cancelled after ~40 min, slow-VM false WARNs (e.g. 6.5 s first visit). Learner asked for a reliable-latency plan (non-burstable machine, no overlap with other jobs, server vs render metrics, run health flag, control URL) — decision pending. Public-repo question pending (client consent, remove .vibe-wise).

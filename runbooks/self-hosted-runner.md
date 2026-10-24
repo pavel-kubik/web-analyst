@@ -1,7 +1,8 @@
 # Self-hosted runner
 
 All workflows (`measure.yml`, `test.yml`, `backfill.yml`) run on our own Linux VM with
-`runs-on: [self-hosted, linux]`. This runbook covers what the VM needs and how to register a runner for this repo.
+labels `[self-hosted, web-analyst]` (same scheme as abeceda-hrou). This runbook covers what the VM needs, how to register a
+runner for this repo, and how to switch back to GitHub-hosted runners.
 
 ## 1. Inspect the VM
 
@@ -75,7 +76,7 @@ curl -fsSL -o runner.tar.gz \
   https://github.com/actions/runner/releases/download/v$VER/actions-runner-linux-$ARCH-$VER.tar.gz
 tar xzf runner.tar.gz
 ./config.sh --url https://github.com/pavel-kubik/web-analyst --token <TOKEN> \
-  --name oci --unattended           # default labels: self-hosted, Linux, X64/ARM64
+  --name oci --labels web-analyst --unattended   # + default labels self-hosted, Linux, X64/ARM64
 exit                                # back to ubuntu (has sudo)
 
 cd /home/runner/actions-runner-web-analyst
@@ -88,6 +89,17 @@ sudo ./svc.sh status
 - GitHub → Settings → Actions → Runners: `oci` shows **Idle**.
 - Push any code change → the **Test** workflow runs on the VM.
 - Actions → Measure → Run workflow with an ad-hoc URL: exercises Playwright without touching trends or R2.
+
+## Switching runners
+
+| Want | Do |
+|---|---|
+| All runs on GitHub-hosted | `gh variable set CI_RUNNER --body github` |
+| Back to self-hosted (default) | `gh variable delete CI_RUNNER` |
+| One manual run elsewhere | Actions → workflow → Run workflow → `runner`: github / self-hosted |
+
+With `CI_RUNNER=github` nothing targets the VM; the runner can stay registered or be removed.
+Jobs targeting self-hosted while the VM is offline queue for up to 24 h and then fail (no automatic fallback).
 
 ## Operations
 
