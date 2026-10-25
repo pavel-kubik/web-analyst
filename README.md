@@ -71,7 +71,8 @@ Tests: `python -m pytest` and `npm test` (Node's built-in test runner, no depend
 [`.github/workflows/measure.yml`](.github/workflows/measure.yml) runs daily at 04:17 UTC, when `sites.yml` changes,
 and on demand (*Actions → Measure → Run workflow*, optionally with an ad-hoc URL – a throwaway smoke check shown
 only in the job summary). It runs the unit tests, measures, writes a verdict summary, uploads new data to R2 and
-commits `results/` back to the repo.
+commits `results/` back to the repo. Hosting alternatives for this job are compared in
+[tasks/002-measure-hosting-options.md](tasks/002-measure-hosting-options.md).
 
 [`.github/workflows/test.yml`](.github/workflows/test.yml) runs the unit tests on every push and pull request
 (except the bot's `results/` commits) without touching any measured site.
@@ -102,4 +103,5 @@ commits `results/` back to the repo.
 ## Tasks
 
 - [001 – FORPSI browser check breaks Google Ads](tasks/001-forpsi-browser-check.md) (resolved)
+- [002 – Where to run the Measure job](tasks/002-measure-hosting-options.md) (open: GitHub Actions vs Cloudflare vs Google Cloud vs own VM)
 - [TODO / later](tasks/TODO.md)

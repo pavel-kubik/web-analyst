@@ -43,3 +43,9 @@
 - Context: the 2026-10-24 scheduled Measure on ubuntu-latest never started (billing/spending limit), confirming the minutes motive.
 - Runner selection (2026-10-24, not committed): copied abeceda-hrou pattern on learner request: default self-hosted `[self-hosted, web-analyst]` (label added to `oci` via API), repo variable CI_RUNNER=github or manual `runner` input → ubuntu-latest; split Playwright install by runner.environment.
 - Found: VM is OCI E2.1.Micro (1 GB RAM, 59.5% steal); 15:12 Measure run on VM was cancelled after ~40 min, slow-VM false WARNs (e.g. 6.5 s first visit). Learner asked for a reliable-latency plan (non-burstable machine, no overlap with other jobs, server vs render metrics, run health flag, control URL) — decision pending. Public-repo question pending (client consent, remove .vibe-wise).
+
+## Where to run Measure (research 2026-10-24, decision pending)
+- Learner asked to compare other services (Cloudflare focus) with GitHub Actions free tier.
+- AI explained (facts): CF Workers Free + Browser Rendering = 10 browser-min/day, 3 concurrent, Chromium only, JS rewrite needed, CF egress IPs; CF Containers = Workers Paid $5/mo only (375 vCPU-min, 25 GiB-h incl.), runs existing Docker image via cron Worker; GH Actions: public repos free, private 2000 min/mo, self-hosted charge postponed.
+- Google Cloud Run Jobs added; comparison saved to tasks/002-measure-hosting-options.md, linked from README (not committed).
+- Open: learner to choose based on cost, latency reliability (links to pending latency plan) and network/IP realism vs Google Ads checks.
