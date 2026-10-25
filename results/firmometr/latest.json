@@ -2,7 +2,7 @@
   "site": "firmometr",
   "name": "firmometr.cz",
   "domain": "https://firmometr.cz",
-  "measured_at": "2026-10-25T07:19:01.385584+00:00",
+  "measured_at": "2026-10-25T09:10:29.073795+00:00",
   "discovery": {
     "sitemaps": [
       "https://firmometr.cz/sitemap.xml"
@@ -66,10 +66,10 @@
           "final_url": "https://firmometr.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.139,
-          "total_s": 0.139,
+          "ttfb_s": 0.126,
+          "total_s": 0.127,
           "headers": {
-            "cf-ray": "a4ff87fc0f17acea-MSP",
+            "cf-ray": "a5002b3d693a102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -89,10 +89,10 @@
           "final_url": "https://firmometr.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.131,
-          "total_s": 0.132,
+          "ttfb_s": 0.097,
+          "total_s": 0.097,
           "headers": {
-            "cf-ray": "a4ff87fcfab0a1ee-MSP",
+            "cf-ray": "a5002b3e590af370-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -112,10 +112,10 @@
           "final_url": "https://firmometr.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.106,
-          "total_s": 0.106,
+          "ttfb_s": 0.121,
+          "total_s": 0.121,
           "headers": {
-            "cf-ray": "a4ff87fdd837102a-MSP",
+            "cf-ray": "a5002b3f0c1facf3-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -135,10 +135,10 @@
           "final_url": "https://firmometr.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.1,
-          "total_s": 0.1,
+          "ttfb_s": 0.095,
+          "total_s": 0.096,
           "headers": {
-            "cf-ray": "a4ff87fea9a09007-MSP",
+            "cf-ray": "a5002b3fee2b9007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -158,10 +158,10 @@
           "final_url": "https://firmometr.cz/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.127,
-          "total_s": 0.127,
+          "ttfb_s": 0.079,
+          "total_s": 0.079,
           "headers": {
-            "cf-ray": "a4ff87ff6c2fd133-MSP",
+            "cf-ray": "a5002b408fbf1ee8-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -196,21 +196,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.449,
+            "time_to_real_content_s": 0.381,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
-              "ttfb_ms": 87,
-              "fcp_ms": 152,
-              "dom_content_loaded_ms": 204,
-              "load_ms": 409,
-              "lcp_ms": 152,
+              "ttfb_ms": 69,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 178,
+              "load_ms": 352,
+              "lcp_ms": 136,
               "cls": 0.003,
-              "transfer_bytes": 18523,
+              "transfer_bytes": 18594,
               "resource_count": 26,
-              "page_bytes": 768913
+              "page_bytes": 768992
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -234,21 +234,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.343,
+            "time_to_real_content_s": 0.323,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
-              "ttfb_ms": 52,
-              "fcp_ms": 128,
-              "dom_content_loaded_ms": 193,
-              "load_ms": 308,
-              "lcp_ms": 128,
+              "ttfb_ms": 48,
+              "fcp_ms": 108,
+              "dom_content_loaded_ms": 149,
+              "load_ms": 300,
+              "lcp_ms": 108,
               "cls": 0.003,
-              "transfer_bytes": 18150,
+              "transfer_bytes": 18197,
               "resource_count": 26,
-              "page_bytes": 18750
+              "page_bytes": 18797
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -275,21 +275,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.82,
+            "time_to_real_content_s": 0.746,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
-              "ttfb_ms": 92,
-              "fcp_ms": 166,
-              "dom_content_loaded_ms": 373,
-              "load_ms": 781,
-              "lcp_ms": 166,
+              "ttfb_ms": 102,
+              "fcp_ms": 216,
+              "dom_content_loaded_ms": 338,
+              "load_ms": 708,
+              "lcp_ms": 216,
               "cls": null,
-              "transfer_bytes": 18528,
+              "transfer_bytes": 18524,
               "resource_count": 33,
-              "page_bytes": 769319
+              "page_bytes": 769315
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -313,21 +313,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.371,
+            "time_to_real_content_s": 0.316,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
-              "ttfb_ms": 53,
-              "fcp_ms": 111,
-              "dom_content_loaded_ms": 217,
-              "load_ms": 311,
-              "lcp_ms": 111,
+              "ttfb_ms": 36,
+              "fcp_ms": 113,
+              "dom_content_loaded_ms": 171,
+              "load_ms": 286,
+              "lcp_ms": 113,
               "cls": null,
-              "transfer_bytes": 18144,
+              "transfer_bytes": 18193,
               "resource_count": 33,
-              "page_bytes": 26930
+              "page_bytes": 26979
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -354,21 +354,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.568,
+            "time_to_real_content_s": 0.554,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
-              "ttfb_ms": 93,
-              "fcp_ms": 172,
-              "dom_content_loaded_ms": 215,
-              "load_ms": 542,
-              "lcp_ms": 172,
+              "ttfb_ms": 70,
+              "fcp_ms": 140,
+              "dom_content_loaded_ms": 184,
+              "load_ms": 531,
+              "lcp_ms": 140,
               "cls": 0,
-              "transfer_bytes": 18596,
+              "transfer_bytes": 18588,
               "resource_count": 26,
-              "page_bytes": 768996
+              "page_bytes": 772716
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -392,21 +392,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.334,
+            "time_to_real_content_s": 0.318,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/",
             "final_title": "Firmometr – Kontrola firmy a IČO zdarma | ARES, insolvence, DPH",
             "perf": {
               "ttfb_ms": 44,
-              "fcp_ms": 108,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 304,
-              "lcp_ms": 108,
+              "fcp_ms": 104,
+              "dom_content_loaded_ms": 182,
+              "load_ms": 289,
+              "lcp_ms": 104,
               "cls": 0.003,
-              "transfer_bytes": 18147,
+              "transfer_bytes": 18146,
               "resource_count": 26,
-              "page_bytes": 18747
+              "page_bytes": 18746
             },
             "console_error_count": 0,
             "console_errors": [],
@@ -428,10 +428,10 @@
           "final_url": "https://firmometr.cz/en/",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.079,
+          "ttfb_s": 0.08,
           "total_s": 0.08,
           "headers": {
-            "cf-ray": "a4ff883e7e589181-MSP",
+            "cf-ray": "a5002b7a394bf370-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -466,21 +466,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.614,
+            "time_to_real_content_s": 0.503,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en",
             "final_title": "Firmometr – Free Czech Company Check | ARES, insolvency, VAT",
             "perf": {
-              "ttfb_ms": 90,
-              "fcp_ms": 164,
-              "dom_content_loaded_ms": 212,
-              "load_ms": 587,
-              "lcp_ms": 164,
+              "ttfb_ms": 139,
+              "fcp_ms": 228,
+              "dom_content_loaded_ms": 257,
+              "load_ms": 464,
+              "lcp_ms": 228,
               "cls": 0.002,
-              "transfer_bytes": 18227,
+              "transfer_bytes": 18230,
               "resource_count": 26,
-              "page_bytes": 767813
+              "page_bytes": 767816
             },
             "console_error_count": 0,
             "console_errors": []
@@ -503,21 +503,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.351,
+            "time_to_real_content_s": 0.31,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en",
             "final_title": "Firmometr – Free Czech Company Check | ARES, insolvency, VAT",
             "perf": {
-              "ttfb_ms": 35,
-              "fcp_ms": 104,
-              "dom_content_loaded_ms": 195,
-              "load_ms": 322,
-              "lcp_ms": 104,
+              "ttfb_ms": 59,
+              "fcp_ms": 116,
+              "dom_content_loaded_ms": 198,
+              "load_ms": 283,
+              "lcp_ms": 116,
               "cls": 0.002,
-              "transfer_bytes": 17883,
+              "transfer_bytes": 17882,
               "resource_count": 26,
-              "page_bytes": 18483
+              "page_bytes": 18482
             },
             "console_error_count": 0,
             "console_errors": []
@@ -538,10 +538,10 @@
           "final_url": "https://firmometr.cz/ceny",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.106,
-          "total_s": 0.106,
+          "ttfb_s": 0.075,
+          "total_s": 0.076,
           "headers": {
-            "cf-ray": "a4ff8854583aa1ee-MSP",
+            "cf-ray": "a5002b9049a4102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -576,21 +576,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.557,
+            "time_to_real_content_s": 0.506,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/ceny",
             "final_title": "Ceník — Firmometr | Monitoring a prověřování firem",
             "perf": {
-              "ttfb_ms": 67,
-              "fcp_ms": 152,
-              "dom_content_loaded_ms": 180,
-              "load_ms": 528,
-              "lcp_ms": 152,
-              "cls": 0.001,
-              "transfer_bytes": 17210,
+              "ttfb_ms": 79,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 185,
+              "load_ms": 484,
+              "lcp_ms": 144,
+              "cls": 0,
+              "transfer_bytes": 17178,
               "resource_count": 25,
-              "page_bytes": 738256
+              "page_bytes": 738226
             },
             "console_error_count": 0,
             "console_errors": []
@@ -613,21 +613,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.368,
+            "time_to_real_content_s": 0.319,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/ceny",
             "final_title": "Ceník — Firmometr | Monitoring a prověřování firem",
             "perf": {
-              "ttfb_ms": 68,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 223,
-              "load_ms": 335,
-              "lcp_ms": 132,
+              "ttfb_ms": 43,
+              "fcp_ms": 104,
+              "dom_content_loaded_ms": 188,
+              "load_ms": 295,
+              "lcp_ms": 104,
               "cls": 0.001,
-              "transfer_bytes": 16807,
+              "transfer_bytes": 16812,
               "resource_count": 25,
-              "page_bytes": 17407
+              "page_bytes": 17412
             },
             "console_error_count": 0,
             "console_errors": []
@@ -648,10 +648,10 @@
           "final_url": "https://firmometr.cz/en/ceny",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.073,
-          "total_s": 0.074,
+          "ttfb_s": 0.064,
+          "total_s": 0.065,
           "headers": {
-            "cf-ray": "a4ff886a1e719181-MSP",
+            "cf-ray": "a5002ba53fab710e-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -686,21 +686,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.59,
+            "time_to_real_content_s": 0.523,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/ceny",
             "final_title": "Pricing — Firmometr | Czech Company Monitoring",
             "perf": {
               "ttfb_ms": 62,
-              "fcp_ms": 148,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 563,
-              "lcp_ms": 412,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 177,
+              "load_ms": 502,
+              "lcp_ms": 396,
               "cls": 0,
-              "transfer_bytes": 16927,
-              "resource_count": 29,
-              "page_bytes": 708969
+              "transfer_bytes": 16903,
+              "resource_count": 24,
+              "page_bytes": 711175
             },
             "console_error_count": 0,
             "console_errors": []
@@ -723,21 +723,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.346,
+            "time_to_real_content_s": 0.313,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/ceny",
             "final_title": "Pricing — Firmometr | Czech Company Monitoring",
             "perf": {
-              "ttfb_ms": 56,
-              "fcp_ms": 116,
-              "dom_content_loaded_ms": 201,
-              "load_ms": 320,
-              "lcp_ms": 328,
+              "ttfb_ms": 43,
+              "fcp_ms": 100,
+              "dom_content_loaded_ms": 176,
+              "load_ms": 283,
+              "lcp_ms": 296,
               "cls": 0.001,
-              "transfer_bytes": 16543,
+              "transfer_bytes": 16548,
               "resource_count": 24,
-              "page_bytes": 17143
+              "page_bytes": 17148
             },
             "console_error_count": 0,
             "console_errors": []
@@ -758,10 +758,10 @@
           "final_url": "https://firmometr.cz/kontakt",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.081,
-          "total_s": 0.081,
+          "ttfb_s": 0.09,
+          "total_s": 0.091,
           "headers": {
-            "cf-ray": "a4ff8883dc0a5756-MSP",
+            "cf-ray": "a5002bba08357816-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -796,21 +796,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.57,
+            "time_to_real_content_s": 0.536,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/kontakt",
             "final_title": "Kontakt — Firmometr",
             "perf": {
-              "ttfb_ms": 98,
-              "fcp_ms": 152,
-              "dom_content_loaded_ms": 200,
-              "load_ms": 546,
-              "lcp_ms": 152,
-              "cls": 0.003,
-              "transfer_bytes": 14932,
+              "ttfb_ms": 62,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 161,
+              "load_ms": 515,
+              "lcp_ms": 124,
+              "cls": 0,
+              "transfer_bytes": 14929,
               "resource_count": 24,
-              "page_bytes": 731958
+              "page_bytes": 731955
             },
             "console_error_count": 0,
             "console_errors": []
@@ -833,21 +833,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.337,
+            "time_to_real_content_s": 0.29,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/kontakt",
             "final_title": "Kontakt — Firmometr",
             "perf": {
-              "ttfb_ms": 48,
-              "fcp_ms": 104,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 307,
-              "lcp_ms": 104,
+              "ttfb_ms": 36,
+              "fcp_ms": 92,
+              "dom_content_loaded_ms": 167,
+              "load_ms": 268,
+              "lcp_ms": 92,
               "cls": 0.002,
-              "transfer_bytes": 14540,
-              "resource_count": 25,
-              "page_bytes": 15440
+              "transfer_bytes": 14561,
+              "resource_count": 24,
+              "page_bytes": 15161
             },
             "console_error_count": 0,
             "console_errors": []
@@ -868,10 +868,10 @@
           "final_url": "https://firmometr.cz/en/kontakt",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.103,
-          "total_s": 0.103,
+          "ttfb_s": 0.065,
+          "total_s": 0.066,
           "headers": {
-            "cf-ray": "a4ff8899587ca1ee-MSP",
+            "cf-ray": "a5002bcefba2102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -906,21 +906,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.577,
+            "time_to_real_content_s": 0.612,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/kontakt",
             "final_title": "Contact — Firmometr",
             "perf": {
-              "ttfb_ms": 88,
-              "fcp_ms": 148,
-              "dom_content_loaded_ms": 198,
-              "load_ms": 550,
-              "lcp_ms": 400,
+              "ttfb_ms": 103,
+              "fcp_ms": 156,
+              "dom_content_loaded_ms": 203,
+              "load_ms": 591,
+              "lcp_ms": 436,
               "cls": 0.002,
-              "transfer_bytes": 14823,
+              "transfer_bytes": 14815,
               "resource_count": 24,
-              "page_bytes": 734767
+              "page_bytes": 731029
             },
             "console_error_count": 0,
             "console_errors": []
@@ -943,21 +943,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.319,
+            "time_to_real_content_s": 0.329,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/kontakt",
             "final_title": "Contact — Firmometr",
             "perf": {
-              "ttfb_ms": 42,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 179,
-              "load_ms": 290,
-              "lcp_ms": 304,
+              "ttfb_ms": 65,
+              "fcp_ms": 120,
+              "dom_content_loaded_ms": 200,
+              "load_ms": 306,
+              "lcp_ms": 312,
               "cls": 0.002,
-              "transfer_bytes": 14439,
+              "transfer_bytes": 14436,
               "resource_count": 24,
-              "page_bytes": 15039
+              "page_bytes": 15036
             },
             "console_error_count": 0,
             "console_errors": []
@@ -978,10 +978,10 @@
           "final_url": "https://firmometr.cz/obchodni-podminky",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.089,
-          "total_s": 0.09,
+          "ttfb_s": 0.086,
+          "total_s": 0.091,
           "headers": {
-            "cf-ray": "a4ff88af0963102a-MSP",
+            "cf-ray": "a5002be48ed5102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1016,21 +1016,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.722,
+            "time_to_real_content_s": 0.574,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/obchodni-podminky",
             "final_title": "Obchodní podmínky — Firmometr",
             "perf": {
-              "ttfb_ms": 70,
-              "fcp_ms": 128,
-              "dom_content_loaded_ms": 177,
-              "load_ms": 700,
-              "lcp_ms": 368,
+              "ttfb_ms": 99,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 195,
+              "load_ms": 554,
+              "lcp_ms": 420,
               "cls": 0.001,
               "transfer_bytes": 15511,
               "resource_count": 22,
-              "page_bytes": 721325
+              "page_bytes": 721333
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1053,21 +1053,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.334,
+            "time_to_real_content_s": 0.322,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/obchodni-podminky",
             "final_title": "Obchodní podmínky — Firmometr",
             "perf": {
-              "ttfb_ms": 43,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 195,
-              "load_ms": 307,
-              "lcp_ms": 324,
+              "ttfb_ms": 69,
+              "fcp_ms": 120,
+              "dom_content_loaded_ms": 196,
+              "load_ms": 301,
+              "lcp_ms": 304,
               "cls": 0.001,
-              "transfer_bytes": 15060,
+              "transfer_bytes": 15058,
               "resource_count": 22,
-              "page_bytes": 15660
+              "page_bytes": 15658
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1088,10 +1088,10 @@
           "final_url": "https://firmometr.cz/en/obchodni-podminky",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.102,
-          "total_s": 0.102,
+          "ttfb_s": 0.066,
+          "total_s": 0.066,
           "headers": {
-            "cf-ray": "a4ff88c5895eacea-MSP",
+            "cf-ray": "a5002bf9eb0c102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1126,21 +1126,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.551,
+            "time_to_real_content_s": 0.561,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/obchodni-podminky",
             "final_title": "Terms of Service — Firmometr",
             "perf": {
-              "ttfb_ms": 112,
-              "fcp_ms": 160,
-              "dom_content_loaded_ms": 214,
-              "load_ms": 528,
-              "lcp_ms": 376,
-              "cls": 0,
-              "transfer_bytes": 15384,
+              "ttfb_ms": 96,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 191,
+              "load_ms": 540,
+              "lcp_ms": 392,
+              "cls": 0.001,
+              "transfer_bytes": 15387,
               "resource_count": 22,
-              "page_bytes": 720386
+              "page_bytes": 720397
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1163,21 +1163,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.323,
+            "time_to_real_content_s": 0.309,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/obchodni-podminky",
             "final_title": "Terms of Service — Firmometr",
             "perf": {
-              "ttfb_ms": 39,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 180,
-              "load_ms": 300,
-              "lcp_ms": 304,
+              "ttfb_ms": 62,
+              "fcp_ms": 112,
+              "dom_content_loaded_ms": 190,
+              "load_ms": 287,
+              "lcp_ms": 296,
               "cls": 0.001,
-              "transfer_bytes": 15004,
+              "transfer_bytes": 15000,
               "resource_count": 22,
-              "page_bytes": 15604
+              "page_bytes": 15600
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1199,9 +1199,9 @@
           "status": 200,
           "redirects": [],
           "ttfb_s": 0.074,
-          "total_s": 0.074,
+          "total_s": 0.075,
           "headers": {
-            "cf-ray": "a4ff88db1837102a-MSP",
+            "cf-ray": "a5002c0f0bca710e-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1236,21 +1236,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.516,
+            "time_to_real_content_s": 0.62,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/gdpr",
             "final_title": "Zásady ochrany osobních údajů — Firmometr",
             "perf": {
-              "ttfb_ms": 68,
-              "fcp_ms": 128,
-              "dom_content_loaded_ms": 174,
-              "load_ms": 491,
-              "lcp_ms": 128,
-              "cls": 0.001,
-              "transfer_bytes": 15903,
+              "ttfb_ms": 95,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 197,
+              "load_ms": 599,
+              "lcp_ms": 144,
+              "cls": 0.002,
+              "transfer_bytes": 15907,
               "resource_count": 22,
-              "page_bytes": 722318
+              "page_bytes": 722322
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1273,21 +1273,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.352,
+            "time_to_real_content_s": 0.306,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/gdpr",
             "final_title": "Zásady ochrany osobních údajů — Firmometr",
             "perf": {
-              "ttfb_ms": 72,
-              "fcp_ms": 128,
-              "dom_content_loaded_ms": 218,
-              "load_ms": 324,
-              "lcp_ms": 128,
+              "ttfb_ms": 56,
+              "fcp_ms": 108,
+              "dom_content_loaded_ms": 185,
+              "load_ms": 282,
+              "lcp_ms": 108,
               "cls": 0.001,
-              "transfer_bytes": 15529,
+              "transfer_bytes": 15525,
               "resource_count": 22,
-              "page_bytes": 16129
+              "page_bytes": 16125
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1308,10 +1308,10 @@
           "final_url": "https://firmometr.cz/en/gdpr",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.083,
-          "total_s": 0.083,
+          "ttfb_s": 0.084,
+          "total_s": 0.084,
           "headers": {
-            "cf-ray": "a4ff88f0bb1f9200-MSP",
+            "cf-ray": "a5002c248b61f370-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1346,21 +1346,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.612,
+            "time_to_real_content_s": 1.001,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/gdpr",
             "final_title": "Privacy Policy — Firmometr",
             "perf": {
-              "ttfb_ms": 88,
+              "ttfb_ms": 86,
               "fcp_ms": 144,
-              "dom_content_loaded_ms": 198,
-              "load_ms": 587,
+              "dom_content_loaded_ms": 180,
+              "load_ms": 980,
               "lcp_ms": 144,
-              "cls": 0.002,
-              "transfer_bytes": 15848,
+              "cls": 0.001,
+              "transfer_bytes": 15844,
               "resource_count": 22,
-              "page_bytes": 721451
+              "page_bytes": 721447
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1383,21 +1383,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.375,
+            "time_to_real_content_s": 0.312,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/gdpr",
             "final_title": "Privacy Policy — Firmometr",
             "perf": {
-              "ttfb_ms": 86,
-              "fcp_ms": 144,
-              "dom_content_loaded_ms": 230,
-              "load_ms": 344,
-              "lcp_ms": 144,
+              "ttfb_ms": 69,
+              "fcp_ms": 120,
+              "dom_content_loaded_ms": 192,
+              "load_ms": 287,
+              "lcp_ms": 120,
               "cls": 0.001,
-              "transfer_bytes": 15498,
+              "transfer_bytes": 15509,
               "resource_count": 22,
-              "page_bytes": 16098
+              "page_bytes": 16109
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1418,10 +1418,10 @@
           "final_url": "https://firmometr.cz/pro-uctarny",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.098,
-          "total_s": 0.099,
+          "ttfb_s": 0.078,
+          "total_s": 0.078,
           "headers": {
-            "cf-ray": "a4ff8906ce80a1ee-MSP",
+            "cf-ray": "a5002c3c49e2710e-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1456,21 +1456,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.622,
+            "time_to_real_content_s": 0.524,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-uctarny",
             "final_title": "Firmometr pro účetní — kontrola dodavatele a DPH spolehlivosti",
             "perf": {
-              "ttfb_ms": 70,
-              "fcp_ms": 156,
-              "dom_content_loaded_ms": 193,
-              "load_ms": 598,
-              "lcp_ms": 408,
+              "ttfb_ms": 65,
+              "fcp_ms": 132,
+              "dom_content_loaded_ms": 172,
+              "load_ms": 503,
+              "lcp_ms": 376,
               "cls": 0,
-              "transfer_bytes": 15942,
+              "transfer_bytes": 15897,
               "resource_count": 25,
-              "page_bytes": 885710
+              "page_bytes": 886163
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1493,18 +1493,18 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.325,
+            "time_to_real_content_s": 0.329,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-uctarny",
             "final_title": "Firmometr pro účetní — kontrola dodavatele a DPH spolehlivosti",
             "perf": {
-              "ttfb_ms": 40,
-              "fcp_ms": 160,
-              "dom_content_loaded_ms": 180,
-              "load_ms": 298,
-              "lcp_ms": 160,
-              "cls": 0,
+              "ttfb_ms": 68,
+              "fcp_ms": 128,
+              "dom_content_loaded_ms": 202,
+              "load_ms": 305,
+              "lcp_ms": 324,
+              "cls": 0.003,
               "transfer_bytes": 15524,
               "resource_count": 25,
               "page_bytes": 16124
@@ -1528,10 +1528,10 @@
           "final_url": "https://firmometr.cz/en/pro-uctarny",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.105,
-          "total_s": 0.105,
+          "ttfb_s": 0.071,
+          "total_s": 0.071,
           "headers": {
-            "cf-ray": "a4ff891ccb59acea-MSP",
+            "cf-ray": "a5002c512d5a9007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1566,21 +1566,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.601,
+            "time_to_real_content_s": 0.519,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-uctarny",
             "final_title": "Firmometr for Accountants — Supplier &amp; VAT Reliability Check",
             "perf": {
-              "ttfb_ms": 103,
-              "fcp_ms": 168,
-              "dom_content_loaded_ms": 217,
-              "load_ms": 575,
-              "lcp_ms": 440,
+              "ttfb_ms": 56,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 498,
+              "lcp_ms": 372,
               "cls": 0,
-              "transfer_bytes": 15693,
+              "transfer_bytes": 15697,
               "resource_count": 24,
-              "page_bytes": 854965
+              "page_bytes": 854969
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1603,21 +1603,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.344,
+            "time_to_real_content_s": 0.293,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-uctarny",
             "final_title": "Firmometr for Accountants — Supplier &amp; VAT Reliability Check",
             "perf": {
-              "ttfb_ms": 47,
-              "fcp_ms": 108,
-              "dom_content_loaded_ms": 198,
-              "load_ms": 316,
-              "lcp_ms": 324,
+              "ttfb_ms": 38,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 171,
+              "load_ms": 271,
+              "lcp_ms": 276,
               "cls": 0.003,
-              "transfer_bytes": 15337,
+              "transfer_bytes": 15327,
               "resource_count": 24,
-              "page_bytes": 15937
+              "page_bytes": 15927
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1638,10 +1638,10 @@
           "final_url": "https://firmometr.cz/pro-pravniky",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.087,
-          "total_s": 0.087,
+          "ttfb_s": 0.076,
+          "total_s": 0.077,
           "headers": {
-            "cf-ray": "a4ff89329ec9a206-MSP",
+            "cf-ray": "a5002c65db139181-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1676,21 +1676,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.585,
+            "time_to_real_content_s": 0.545,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-pravniky",
             "final_title": "Firmometr pro právníky — prověření protistrany před podpisem smlouvy",
             "perf": {
-              "ttfb_ms": 68,
-              "fcp_ms": 156,
-              "dom_content_loaded_ms": 187,
-              "load_ms": 560,
-              "lcp_ms": 156,
+              "ttfb_ms": 56,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 167,
+              "load_ms": 523,
+              "lcp_ms": 136,
               "cls": 0,
-              "transfer_bytes": 15612,
+              "transfer_bytes": 15617,
               "resource_count": 25,
-              "page_bytes": 885865
+              "page_bytes": 889123
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1713,21 +1713,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.324,
+            "time_to_real_content_s": 0.299,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-pravniky",
             "final_title": "Firmometr pro právníky — prověření protistrany před podpisem smlouvy",
             "perf": {
-              "ttfb_ms": 38,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 188,
-              "load_ms": 297,
-              "lcp_ms": 100,
+              "ttfb_ms": 40,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 178,
+              "load_ms": 275,
+              "lcp_ms": 96,
               "cls": 0.004,
-              "transfer_bytes": 15266,
+              "transfer_bytes": 15279,
               "resource_count": 25,
-              "page_bytes": 15866
+              "page_bytes": 15879
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1748,10 +1748,10 @@
           "final_url": "https://firmometr.cz/en/pro-pravniky",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.091,
-          "total_s": 0.092,
+          "ttfb_s": 0.096,
+          "total_s": 0.097,
           "headers": {
-            "cf-ray": "a4ff89484bb5a201-MSP",
+            "cf-ray": "a5002c7a9eb7a201-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1786,21 +1786,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.55,
+            "time_to_real_content_s": 0.533,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-pravniky",
             "final_title": "Firmometr for Lawyers — Counterparty Check Before Signing",
             "perf": {
-              "ttfb_ms": 88,
-              "fcp_ms": 148,
-              "dom_content_loaded_ms": 193,
-              "load_ms": 525,
-              "lcp_ms": 148,
+              "ttfb_ms": 67,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 167,
+              "load_ms": 511,
+              "lcp_ms": 124,
               "cls": 0,
-              "transfer_bytes": 15447,
+              "transfer_bytes": 15444,
               "resource_count": 24,
-              "page_bytes": 854719
+              "page_bytes": 854716
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1823,21 +1823,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.313,
+            "time_to_real_content_s": 0.405,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-pravniky",
             "final_title": "Firmometr for Lawyers — Counterparty Check Before Signing",
             "perf": {
-              "ttfb_ms": 37,
-              "fcp_ms": 96,
-              "dom_content_loaded_ms": 178,
-              "load_ms": 288,
-              "lcp_ms": 96,
+              "ttfb_ms": 69,
+              "fcp_ms": 128,
+              "dom_content_loaded_ms": 240,
+              "load_ms": 380,
+              "lcp_ms": 128,
               "cls": 0.033,
-              "transfer_bytes": 15070,
+              "transfer_bytes": 15068,
               "resource_count": 24,
-              "page_bytes": 15670
+              "page_bytes": 15668
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1858,10 +1858,10 @@
           "final_url": "https://firmometr.cz/pro-hr",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.092,
-          "total_s": 0.092,
+          "ttfb_s": 0.078,
+          "total_s": 0.079,
           "headers": {
-            "cf-ray": "a4ff895d7934a1ee-MSP",
+            "cf-ray": "a5002c901ec79181-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -1896,21 +1896,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.551,
+            "time_to_real_content_s": 0.557,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-hr",
             "final_title": "Firmometr pro HR — ověření zaměstnavatele před nástupem",
             "perf": {
-              "ttfb_ms": 60,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 172,
-              "load_ms": 525,
-              "lcp_ms": 424,
-              "cls": 0.001,
-              "transfer_bytes": 15568,
+              "ttfb_ms": 56,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 192,
+              "load_ms": 524,
+              "lcp_ms": 388,
+              "cls": 0,
+              "transfer_bytes": 15562,
               "resource_count": 25,
-              "page_bytes": 885336
+              "page_bytes": 885338
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1933,21 +1933,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.36,
+            "time_to_real_content_s": 0.299,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/pro-hr",
             "final_title": "Firmometr pro HR — ověření zaměstnavatele před nástupem",
             "perf": {
-              "ttfb_ms": 78,
-              "fcp_ms": 140,
-              "dom_content_loaded_ms": 225,
-              "load_ms": 333,
-              "lcp_ms": 352,
+              "ttfb_ms": 34,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 273,
+              "lcp_ms": 292,
               "cls": 0.002,
-              "transfer_bytes": 15201,
+              "transfer_bytes": 15196,
               "resource_count": 25,
-              "page_bytes": 15801
+              "page_bytes": 15796
             },
             "console_error_count": 0,
             "console_errors": []
@@ -1968,10 +1968,10 @@
           "final_url": "https://firmometr.cz/en/pro-hr",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.071,
-          "total_s": 0.072,
+          "ttfb_s": 0.07,
+          "total_s": 0.071,
           "headers": {
-            "cf-ray": "a4ff89734edc102a-MSP",
+            "cf-ray": "a5002ca5294e102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2006,21 +2006,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.582,
+            "time_to_real_content_s": 0.538,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-hr",
             "final_title": "Firmometr for HR — Verify Your Employer Before Starting",
             "perf": {
-              "ttfb_ms": 69,
+              "ttfb_ms": 72,
               "fcp_ms": 132,
-              "dom_content_loaded_ms": 181,
-              "load_ms": 558,
-              "lcp_ms": 428,
+              "dom_content_loaded_ms": 176,
+              "load_ms": 515,
+              "lcp_ms": 408,
               "cls": 0.001,
-              "transfer_bytes": 15361,
+              "transfer_bytes": 15377,
               "resource_count": 24,
-              "page_bytes": 854633
+              "page_bytes": 854652
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2043,21 +2043,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.334,
+            "time_to_real_content_s": 0.328,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/pro-hr",
             "final_title": "Firmometr for HR — Verify Your Employer Before Starting",
             "perf": {
-              "ttfb_ms": 65,
-              "fcp_ms": 124,
-              "dom_content_loaded_ms": 201,
-              "load_ms": 292,
-              "lcp_ms": 324,
+              "ttfb_ms": 74,
+              "fcp_ms": 132,
+              "dom_content_loaded_ms": 203,
+              "load_ms": 305,
+              "lcp_ms": 312,
               "cls": 0.002,
-              "transfer_bytes": 14992,
+              "transfer_bytes": 14998,
               "resource_count": 24,
-              "page_bytes": 15592
+              "page_bytes": 15598
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2078,10 +2078,10 @@
           "final_url": "https://firmometr.cz/monitoring-firem",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.107,
-          "total_s": 0.108,
+          "ttfb_s": 0.068,
+          "total_s": 0.068,
           "headers": {
-            "cf-ray": "a4ff8988dc49d133-MSP",
+            "cf-ray": "a5002cba7f179181-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2116,21 +2116,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.564,
+            "time_to_real_content_s": 0.572,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/monitoring-firem",
             "final_title": "Sledování změn ve firmě — automatické upozornění na insolvenci a DPH",
             "perf": {
-              "ttfb_ms": 112,
-              "fcp_ms": 164,
-              "dom_content_loaded_ms": 214,
-              "load_ms": 541,
-              "lcp_ms": 432,
+              "ttfb_ms": 57,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 165,
+              "load_ms": 551,
+              "lcp_ms": 384,
               "cls": 0,
               "transfer_bytes": 15726,
-              "resource_count": 25,
-              "page_bytes": 885899
+              "resource_count": 27,
+              "page_bytes": 886102
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2153,21 +2153,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.343,
+            "time_to_real_content_s": 0.32,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/monitoring-firem",
             "final_title": "Sledování změn ve firmě — automatické upozornění na insolvenci a DPH",
             "perf": {
-              "ttfb_ms": 70,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 212,
-              "load_ms": 315,
-              "lcp_ms": 332,
+              "ttfb_ms": 65,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 198,
+              "load_ms": 298,
+              "lcp_ms": 304,
               "cls": 0.002,
-              "transfer_bytes": 15361,
+              "transfer_bytes": 15388,
               "resource_count": 25,
-              "page_bytes": 15961
+              "page_bytes": 15988
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2188,10 +2188,10 @@
           "final_url": "https://firmometr.cz/en/monitoring-firem",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.073,
-          "total_s": 0.074,
+          "ttfb_s": 0.072,
+          "total_s": 0.073,
           "headers": {
-            "cf-ray": "a4ff899e78059200-MSP",
+            "cf-ray": "a5002ccf98609007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2226,21 +2226,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.557,
+            "time_to_real_content_s": 0.526,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/monitoring-firem",
             "final_title": "Company Monitoring — Automatic Insolvency &amp; VAT Alerts",
             "perf": {
-              "ttfb_ms": 99,
-              "fcp_ms": 160,
-              "dom_content_loaded_ms": 201,
-              "load_ms": 533,
-              "lcp_ms": 160,
-              "cls": 0,
-              "transfer_bytes": 15581,
-              "resource_count": 23,
-              "page_bytes": 530330
+              "ttfb_ms": 77,
+              "fcp_ms": 140,
+              "dom_content_loaded_ms": 181,
+              "load_ms": 505,
+              "lcp_ms": 140,
+              "cls": 0.003,
+              "transfer_bytes": 15556,
+              "resource_count": 24,
+              "page_bytes": 854828
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2263,21 +2263,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.295,
+            "time_to_real_content_s": 0.309,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/monitoring-firem",
             "final_title": "Company Monitoring — Automatic Insolvency &amp; VAT Alerts",
             "perf": {
-              "ttfb_ms": 33,
-              "fcp_ms": 116,
-              "dom_content_loaded_ms": 131,
-              "load_ms": 270,
-              "lcp_ms": 116,
-              "cls": 0,
-              "transfer_bytes": 15175,
-              "resource_count": 23,
-              "page_bytes": 15775
+              "ttfb_ms": 56,
+              "fcp_ms": 108,
+              "dom_content_loaded_ms": 184,
+              "load_ms": 287,
+              "lcp_ms": 108,
+              "cls": 0.002,
+              "transfer_bytes": 15202,
+              "resource_count": 24,
+              "page_bytes": 15802
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2298,10 +2298,10 @@
           "final_url": "https://firmometr.cz/due-diligence",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.114,
-          "total_s": 0.115,
+          "ttfb_s": 0.087,
+          "total_s": 0.087,
           "headers": {
-            "cf-ray": "a4ff89b37e4da203-MSP",
+            "cf-ray": "a5002ce43d7aa20f-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2336,21 +2336,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.517,
+            "time_to_real_content_s": 0.636,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/due-diligence",
             "final_title": "Due diligence české firmy — ověření před akvizicí nebo investicí",
             "perf": {
-              "ttfb_ms": 56,
-              "fcp_ms": 128,
+              "ttfb_ms": 64,
+              "fcp_ms": 132,
               "dom_content_loaded_ms": 170,
-              "load_ms": 493,
-              "lcp_ms": 128,
+              "load_ms": 610,
+              "lcp_ms": 132,
               "cls": 0,
-              "transfer_bytes": 15636,
+              "transfer_bytes": 15634,
               "resource_count": 25,
-              "page_bytes": 885412
+              "page_bytes": 885410
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2373,21 +2373,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.319,
+            "time_to_real_content_s": 0.322,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/due-diligence",
             "final_title": "Due diligence české firmy — ověření před akvizicí nebo investicí",
             "perf": {
-              "ttfb_ms": 38,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 181,
-              "load_ms": 288,
-              "lcp_ms": 100,
+              "ttfb_ms": 40,
+              "fcp_ms": 120,
+              "dom_content_loaded_ms": 197,
+              "load_ms": 295,
+              "lcp_ms": 120,
               "cls": 0.032,
-              "transfer_bytes": 15254,
+              "transfer_bytes": 15213,
               "resource_count": 25,
-              "page_bytes": 15854
+              "page_bytes": 15813
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2408,10 +2408,10 @@
           "final_url": "https://firmometr.cz/en/due-diligence",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.068,
-          "total_s": 0.069,
+          "ttfb_s": 0.096,
+          "total_s": 0.096,
           "headers": {
-            "cf-ray": "a4ff89c88dcf9200-MSP",
+            "cf-ray": "a5002cf9c99ca1be-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2446,21 +2446,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.511,
+            "time_to_real_content_s": 0.407,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/due-diligence",
             "final_title": "Czech Company Due Diligence — Pre-Acquisition Verification",
             "perf": {
-              "ttfb_ms": 56,
-              "fcp_ms": 144,
-              "dom_content_loaded_ms": 168,
-              "load_ms": 487,
-              "lcp_ms": 144,
-              "cls": 0,
-              "transfer_bytes": 15434,
+              "ttfb_ms": 84,
+              "fcp_ms": 176,
+              "dom_content_loaded_ms": 233,
+              "load_ms": 378,
+              "lcp_ms": 176,
+              "cls": 0.002,
+              "transfer_bytes": 15435,
               "resource_count": 24,
-              "page_bytes": 854698
+              "page_bytes": 854707
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2483,21 +2483,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.308,
+            "time_to_real_content_s": 0.31,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/due-diligence",
             "final_title": "Czech Company Due Diligence — Pre-Acquisition Verification",
             "perf": {
-              "ttfb_ms": 34,
-              "fcp_ms": 92,
-              "dom_content_loaded_ms": 175,
-              "load_ms": 280,
-              "lcp_ms": 92,
+              "ttfb_ms": 59,
+              "fcp_ms": 116,
+              "dom_content_loaded_ms": 186,
+              "load_ms": 285,
+              "lcp_ms": 116,
               "cls": 0.002,
-              "transfer_bytes": 15053,
+              "transfer_bytes": 15070,
               "resource_count": 24,
-              "page_bytes": 15653
+              "page_bytes": 15670
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2518,10 +2518,10 @@
           "final_url": "https://firmometr.cz/kontrola-firmy-zdarma",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.113,
-          "total_s": 0.113,
+          "ttfb_s": 0.105,
+          "total_s": 0.105,
           "headers": {
-            "cf-ray": "a4ff89dd4ddba203-MSP",
+            "cf-ray": "a5002d0fefb7a201-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2556,21 +2556,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.527,
+            "time_to_real_content_s": 0.53,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/kontrola-firmy-zdarma",
             "final_title": "Prověření firmy zdarma dle IČO — ARES, ISIR, DPH | Firmometr",
             "perf": {
-              "ttfb_ms": 102,
-              "fcp_ms": 188,
-              "dom_content_loaded_ms": 230,
-              "load_ms": 494,
-              "lcp_ms": 436,
+              "ttfb_ms": 78,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 182,
+              "load_ms": 506,
+              "lcp_ms": 364,
               "cls": 0,
               "transfer_bytes": 16272,
               "resource_count": 24,
-              "page_bytes": 737026
+              "page_bytes": 733296
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2593,21 +2593,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.333,
+            "time_to_real_content_s": 0.309,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/kontrola-firmy-zdarma",
             "final_title": "Prověření firmy zdarma dle IČO — ARES, ISIR, DPH | Firmometr",
             "perf": {
-              "ttfb_ms": 40,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 181,
-              "load_ms": 304,
-              "lcp_ms": 312,
+              "ttfb_ms": 35,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 163,
+              "load_ms": 285,
+              "lcp_ms": 292,
               "cls": 0.008,
-              "transfer_bytes": 15894,
+              "transfer_bytes": 15927,
               "resource_count": 24,
-              "page_bytes": 16494
+              "page_bytes": 16527
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2628,10 +2628,10 @@
           "final_url": "https://firmometr.cz/en/free-company-check",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.105,
-          "total_s": 0.105,
+          "ttfb_s": 0.07,
+          "total_s": 0.07,
           "headers": {
-            "cf-ray": "a4ff89f2eb21a1cd-MSP",
+            "cf-ray": "a5002d24de7e9007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2666,21 +2666,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.548,
+            "time_to_real_content_s": 0.511,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/free-company-check",
             "final_title": "Free Czech Company Check by ID — ARES, ISIR, VAT | Firmometr",
             "perf": {
-              "ttfb_ms": 73,
-              "fcp_ms": 140,
-              "dom_content_loaded_ms": 196,
-              "load_ms": 522,
-              "lcp_ms": 140,
+              "ttfb_ms": 90,
+              "fcp_ms": 144,
+              "dom_content_loaded_ms": 188,
+              "load_ms": 489,
+              "lcp_ms": 144,
               "cls": 0,
-              "transfer_bytes": 16079,
+              "transfer_bytes": 16081,
               "resource_count": 23,
-              "page_bytes": 706329
+              "page_bytes": 702601
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2703,21 +2703,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.331,
+            "time_to_real_content_s": 0.298,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/free-company-check",
             "final_title": "Free Czech Company Check by ID — ARES, ISIR, VAT | Firmometr",
             "perf": {
-              "ttfb_ms": 37,
-              "fcp_ms": 96,
-              "dom_content_loaded_ms": 181,
-              "load_ms": 304,
-              "lcp_ms": 96,
+              "ttfb_ms": 36,
+              "fcp_ms": 92,
+              "dom_content_loaded_ms": 168,
+              "load_ms": 273,
+              "lcp_ms": 92,
               "cls": 0.008,
-              "transfer_bytes": 15733,
-              "resource_count": 24,
-              "page_bytes": 16633
+              "transfer_bytes": 15711,
+              "resource_count": 23,
+              "page_bytes": 16311
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2738,10 +2738,10 @@
           "final_url": "https://firmometr.cz/blog",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.073,
-          "total_s": 0.074,
+          "ttfb_s": 0.076,
+          "total_s": 0.076,
           "headers": {
-            "cf-ray": "a4ff8a087a38102a-MSP",
+            "cf-ray": "a5002d398e6fe895-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2776,21 +2776,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.544,
+            "time_to_real_content_s": 0.749,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog",
             "final_title": "Blog — Firmometr | Prověřování českých firem",
             "perf": {
-              "ttfb_ms": 91,
+              "ttfb_ms": 101,
               "fcp_ms": 152,
-              "dom_content_loaded_ms": 196,
-              "load_ms": 521,
-              "lcp_ms": 400,
-              "cls": 0,
+              "dom_content_loaded_ms": 193,
+              "load_ms": 729,
+              "lcp_ms": 416,
+              "cls": 0.003,
               "transfer_bytes": 15247,
               "resource_count": 24,
-              "page_bytes": 748170
+              "page_bytes": 748560
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2813,21 +2813,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.332,
+            "time_to_real_content_s": 0.325,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog",
             "final_title": "Blog — Firmometr | Prověřování českých firem",
             "perf": {
-              "ttfb_ms": 38,
-              "fcp_ms": 96,
-              "dom_content_loaded_ms": 184,
-              "load_ms": 308,
-              "lcp_ms": 312,
+              "ttfb_ms": 63,
+              "fcp_ms": 112,
+              "dom_content_loaded_ms": 187,
+              "load_ms": 304,
+              "lcp_ms": 308,
               "cls": 0.003,
-              "transfer_bytes": 14879,
+              "transfer_bytes": 14876,
               "resource_count": 24,
-              "page_bytes": 15479
+              "page_bytes": 15476
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2848,10 +2848,10 @@
           "final_url": "https://firmometr.cz/en/blog",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.081,
-          "total_s": 0.081,
+          "ttfb_s": 0.075,
+          "total_s": 0.076,
           "headers": {
-            "cf-ray": "a4ff8a1da896a201-MSP",
+            "cf-ray": "a5002d4fd9e5acee-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2886,21 +2886,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.608,
+            "time_to_real_content_s": 0.559,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog",
             "final_title": "Blog — Firmometr | Czech Company Verification",
             "perf": {
-              "ttfb_ms": 103,
-              "fcp_ms": 156,
-              "dom_content_loaded_ms": 203,
-              "load_ms": 585,
-              "lcp_ms": 156,
-              "cls": 0,
-              "transfer_bytes": 15058,
+              "ttfb_ms": 81,
+              "fcp_ms": 128,
+              "dom_content_loaded_ms": 174,
+              "load_ms": 538,
+              "lcp_ms": 128,
+              "cls": 0.002,
+              "transfer_bytes": 15056,
               "resource_count": 23,
-              "page_bytes": 721207
+              "page_bytes": 717475
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2923,21 +2923,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.319,
+            "time_to_real_content_s": 0.314,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog",
             "final_title": "Blog — Firmometr | Czech Company Verification",
             "perf": {
-              "ttfb_ms": 35,
-              "fcp_ms": 88,
-              "dom_content_loaded_ms": 174,
-              "load_ms": 293,
-              "lcp_ms": 88,
+              "ttfb_ms": 46,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 175,
+              "load_ms": 292,
+              "lcp_ms": 96,
               "cls": 0.002,
-              "transfer_bytes": 14712,
+              "transfer_bytes": 14711,
               "resource_count": 23,
-              "page_bytes": 15312
+              "page_bytes": 15311
             },
             "console_error_count": 0,
             "console_errors": []
@@ -2958,10 +2958,10 @@
           "final_url": "https://firmometr.cz/blog/jak-proverit-firmu-pred-spolupraci",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.063,
-          "total_s": 0.064,
+          "ttfb_s": 0.079,
+          "total_s": 0.079,
           "headers": {
-            "cf-ray": "a4ff8a331ecc102a-MSP",
+            "cf-ray": "a5002d64d80a9181-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -2996,21 +2996,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.563,
+            "time_to_real_content_s": 0.538,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/jak-proverit-firmu-pred-spolupraci",
             "final_title": "Jak prověřit firmu před spoluprací (průvodce 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 89,
-              "fcp_ms": 148,
-              "dom_content_loaded_ms": 195,
-              "load_ms": 540,
-              "lcp_ms": 468,
+              "ttfb_ms": 57,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 161,
+              "load_ms": 517,
+              "lcp_ms": 400,
               "cls": 0.001,
-              "transfer_bytes": 17551,
+              "transfer_bytes": 17642,
               "resource_count": 24,
-              "page_bytes": 750778
+              "page_bytes": 750869
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3033,21 +3033,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.372,
+            "time_to_real_content_s": 0.342,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/jak-proverit-firmu-pred-spolupraci",
             "final_title": "Jak prověřit firmu před spoluprací (průvodce 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 41,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 194,
-              "load_ms": 327,
-              "lcp_ms": 336,
+              "ttfb_ms": 69,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 206,
+              "load_ms": 319,
+              "lcp_ms": 324,
               "cls": 0.001,
-              "transfer_bytes": 17268,
+              "transfer_bytes": 17181,
               "resource_count": 24,
-              "page_bytes": 17868
+              "page_bytes": 17781
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3068,10 +3068,10 @@
           "final_url": "https://firmometr.cz/en/blog/jak-proverit-firmu-pred-spolupraci",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.115,
-          "total_s": 0.116,
+          "ttfb_s": 0.072,
+          "total_s": 0.072,
           "headers": {
-            "cf-ray": "a4ff8a485822a203-MSP",
+            "cf-ray": "a5002d79faa7acde-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3106,21 +3106,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.553,
+            "time_to_real_content_s": 0.374,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/jak-proverit-firmu-pred-spolupraci",
             "final_title": "How to Check a Company Before Working Together (2026 Guide) — Firmometr",
             "perf": {
-              "ttfb_ms": 81,
-              "fcp_ms": 140,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 529,
-              "lcp_ms": 400,
-              "cls": 0,
-              "transfer_bytes": 17000,
+              "ttfb_ms": 95,
+              "fcp_ms": 148,
+              "dom_content_loaded_ms": 193,
+              "load_ms": 348,
+              "lcp_ms": 412,
+              "cls": 0.001,
+              "transfer_bytes": 16999,
               "resource_count": 24,
-              "page_bytes": 749407
+              "page_bytes": 749414
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3143,21 +3143,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.342,
+            "time_to_real_content_s": 0.312,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/jak-proverit-firmu-pred-spolupraci",
             "final_title": "How to Check a Company Before Working Together (2026 Guide) — Firmometr",
             "perf": {
-              "ttfb_ms": 45,
+              "ttfb_ms": 49,
               "fcp_ms": 100,
-              "dom_content_loaded_ms": 191,
-              "load_ms": 317,
-              "lcp_ms": 304,
+              "dom_content_loaded_ms": 181,
+              "load_ms": 285,
+              "lcp_ms": 300,
               "cls": 0.001,
-              "transfer_bytes": 16622,
+              "transfer_bytes": 16661,
               "resource_count": 24,
-              "page_bytes": 17222
+              "page_bytes": 17261
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3178,10 +3178,10 @@
           "final_url": "https://firmometr.cz/blog/jak-cist-insolvencni-rejstrik",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.106,
-          "total_s": 0.106,
+          "ttfb_s": 0.07,
+          "total_s": 0.07,
           "headers": {
-            "cf-ray": "a4ff8a5dca51511c-MSP",
+            "cf-ray": "a5002d8ea8c0102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3216,21 +3216,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.536,
+            "time_to_real_content_s": 0.531,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/jak-cist-insolvencni-rejstrik",
             "final_title": "Jak číst insolvenční rejstřík (průvodce ISIR 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 69,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 182,
-              "load_ms": 511,
-              "lcp_ms": 392,
-              "cls": 0,
-              "transfer_bytes": 16636,
+              "ttfb_ms": 68,
+              "fcp_ms": 128,
+              "dom_content_loaded_ms": 173,
+              "load_ms": 509,
+              "lcp_ms": 400,
+              "cls": 0.014,
+              "transfer_bytes": 16633,
               "resource_count": 24,
-              "page_bytes": 749857
+              "page_bytes": 749860
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3253,21 +3253,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.342,
+            "time_to_real_content_s": 0.307,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/jak-cist-insolvencni-rejstrik",
             "final_title": "Jak číst insolvenční rejstřík (průvodce ISIR 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 41,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 316,
-              "lcp_ms": 320,
+              "ttfb_ms": 36,
+              "fcp_ms": 88,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 284,
+              "lcp_ms": 288,
               "cls": 0.014,
-              "transfer_bytes": 16264,
+              "transfer_bytes": 16338,
               "resource_count": 24,
-              "page_bytes": 16864
+              "page_bytes": 16938
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3288,10 +3288,10 @@
           "final_url": "https://firmometr.cz/en/blog/jak-cist-insolvencni-rejstrik",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.083,
-          "total_s": 0.083,
+          "ttfb_s": 0.074,
+          "total_s": 0.074,
           "headers": {
-            "cf-ray": "a4ff8a7389e1ad26-MSP",
+            "cf-ray": "a5002da37e1de895-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3326,21 +3326,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.538,
+            "time_to_real_content_s": 0.669,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/jak-cist-insolvencni-rejstrik",
             "final_title": "How to Read the Czech Insolvency Register (ISIR Guide 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 65,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 179,
-              "load_ms": 513,
-              "lcp_ms": 396,
-              "cls": 0,
-              "transfer_bytes": 16193,
-              "resource_count": 24,
-              "page_bytes": 752338
+              "ttfb_ms": 74,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 172,
+              "load_ms": 648,
+              "lcp_ms": 408,
+              "cls": 0.001,
+              "transfer_bytes": 16188,
+              "resource_count": 29,
+              "page_bytes": 750103
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3363,21 +3363,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.333,
+            "time_to_real_content_s": 0.324,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/jak-cist-insolvencni-rejstrik",
             "final_title": "How to Read the Czech Insolvency Register (ISIR Guide 2026) — Firmometr",
             "perf": {
-              "ttfb_ms": 37,
-              "fcp_ms": 92,
-              "dom_content_loaded_ms": 182,
-              "load_ms": 308,
-              "lcp_ms": 316,
+              "ttfb_ms": 55,
+              "fcp_ms": 108,
+              "dom_content_loaded_ms": 190,
+              "load_ms": 303,
+              "lcp_ms": 308,
               "cls": 0.001,
-              "transfer_bytes": 15822,
+              "transfer_bytes": 15823,
               "resource_count": 24,
-              "page_bytes": 16422
+              "page_bytes": 16423
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3398,10 +3398,10 @@
           "final_url": "https://firmometr.cz/blog/nespolehlivy-platce-dph",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.079,
-          "total_s": 0.079,
+          "ttfb_s": 0.07,
+          "total_s": 0.07,
           "headers": {
-            "cf-ray": "a4ff8a893d36511c-MSP",
+            "cf-ray": "a5002db92c869181-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3436,21 +3436,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.653,
+            "time_to_real_content_s": 0.518,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/nespolehlivy-platce-dph",
             "final_title": "Nespolehlivý plátce DPH — co to znamená a jak se chránit — Firmometr",
             "perf": {
-              "ttfb_ms": 83,
-              "fcp_ms": 140,
-              "dom_content_loaded_ms": 190,
-              "load_ms": 626,
-              "lcp_ms": 364,
+              "ttfb_ms": 77,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 176,
+              "load_ms": 497,
+              "lcp_ms": 368,
               "cls": 0,
               "transfer_bytes": 16498,
               "resource_count": 24,
-              "page_bytes": 749725
+              "page_bytes": 749658
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3473,21 +3473,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.339,
+            "time_to_real_content_s": 0.296,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/nespolehlivy-platce-dph",
             "final_title": "Nespolehlivý plátce DPH — co to znamená a jak se chránit — Firmometr",
             "perf": {
-              "ttfb_ms": 43,
-              "fcp_ms": 104,
-              "dom_content_loaded_ms": 188,
-              "load_ms": 313,
-              "lcp_ms": 316,
+              "ttfb_ms": 36,
+              "fcp_ms": 88,
+              "dom_content_loaded_ms": 167,
+              "load_ms": 274,
+              "lcp_ms": 280,
               "cls": 0,
-              "transfer_bytes": 16116,
+              "transfer_bytes": 16117,
               "resource_count": 24,
-              "page_bytes": 16716
+              "page_bytes": 16717
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3508,10 +3508,10 @@
           "final_url": "https://firmometr.cz/en/blog/nespolehlivy-platce-dph",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.108,
-          "total_s": 0.108,
+          "ttfb_s": 0.066,
+          "total_s": 0.066,
           "headers": {
-            "cf-ray": "a4ff8a9f2ee0d133-MSP",
+            "cf-ray": "a5002dcdbe28102a-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3546,21 +3546,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.574,
+            "time_to_real_content_s": 0.522,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/nespolehlivy-platce-dph",
             "final_title": "Unreliable VAT Payer — What It Means and How to Protect Yourself — Firmometr",
             "perf": {
-              "ttfb_ms": 102,
-              "fcp_ms": 160,
-              "dom_content_loaded_ms": 211,
-              "load_ms": 548,
-              "lcp_ms": 440,
+              "ttfb_ms": 78,
+              "fcp_ms": 132,
+              "dom_content_loaded_ms": 171,
+              "load_ms": 499,
+              "lcp_ms": 368,
               "cls": 0,
-              "transfer_bytes": 16150,
+              "transfer_bytes": 16151,
               "resource_count": 24,
-              "page_bytes": 748565
+              "page_bytes": 752296
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3589,15 +3589,15 @@
             "final_url": "https://firmometr.cz/en/blog/nespolehlivy-platce-dph",
             "final_title": "Unreliable VAT Payer — What It Means and How to Protect Yourself — Firmometr",
             "perf": {
-              "ttfb_ms": 54,
-              "fcp_ms": 108,
-              "dom_content_loaded_ms": 197,
-              "load_ms": 319,
-              "lcp_ms": 332,
+              "ttfb_ms": 84,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 212,
+              "load_ms": 318,
+              "lcp_ms": 336,
               "cls": 0,
-              "transfer_bytes": 15851,
+              "transfer_bytes": 15784,
               "resource_count": 24,
-              "page_bytes": 16451
+              "page_bytes": 16384
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3618,10 +3618,10 @@
           "final_url": "https://firmometr.cz/blog/ares-jak-vyhledat-firmu",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.075,
-          "total_s": 0.076,
+          "ttfb_s": 0.095,
+          "total_s": 0.096,
           "headers": {
-            "cf-ray": "a4ff8ab50d279181-MSP",
+            "cf-ray": "a5002de28e46ad05-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3656,18 +3656,18 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.56,
+            "time_to_real_content_s": 0.669,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/ares-jak-vyhledat-firmu",
             "final_title": "ARES vyhledávání firmy — co všechno zjistíte — Firmometr",
             "perf": {
-              "ttfb_ms": 63,
-              "fcp_ms": 124,
-              "dom_content_loaded_ms": 175,
-              "load_ms": 535,
-              "lcp_ms": 444,
-              "cls": 0.002,
+              "ttfb_ms": 58,
+              "fcp_ms": 120,
+              "dom_content_loaded_ms": 160,
+              "load_ms": 636,
+              "lcp_ms": 332,
+              "cls": 0,
               "transfer_bytes": 16540,
               "resource_count": 24,
               "page_bytes": 749767
@@ -3693,17 +3693,17 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.354,
+            "time_to_real_content_s": 0.302,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/ares-jak-vyhledat-firmu",
             "final_title": "ARES vyhledávání firmy — co všechno zjistíte — Firmometr",
             "perf": {
-              "ttfb_ms": 58,
-              "fcp_ms": 116,
-              "dom_content_loaded_ms": 204,
-              "load_ms": 328,
-              "lcp_ms": 328,
+              "ttfb_ms": 35,
+              "fcp_ms": 88,
+              "dom_content_loaded_ms": 169,
+              "load_ms": 276,
+              "lcp_ms": 292,
               "cls": 0.001,
               "transfer_bytes": 16161,
               "resource_count": 24,
@@ -3728,10 +3728,10 @@
           "final_url": "https://firmometr.cz/en/blog/ares-jak-vyhledat-firmu",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.087,
-          "total_s": 0.088,
+          "ttfb_s": 0.066,
+          "total_s": 0.066,
           "headers": {
-            "cf-ray": "a4ff8acabd28a1fd-MSP",
+            "cf-ray": "a5002df83f7b9007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3766,21 +3766,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.546,
+            "time_to_real_content_s": 0.515,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/ares-jak-vyhledat-firmu",
             "final_title": "ARES Company Search — What the Czech Register Reveals — Firmometr",
             "perf": {
               "ttfb_ms": 62,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 179,
-              "load_ms": 522,
-              "lcp_ms": 400,
-              "cls": 0,
-              "transfer_bytes": 16259,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 166,
+              "load_ms": 493,
+              "lcp_ms": 376,
+              "cls": 0.004,
+              "transfer_bytes": 16252,
               "resource_count": 24,
-              "page_bytes": 748674
+              "page_bytes": 748667
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3803,21 +3803,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.333,
+            "time_to_real_content_s": 0.304,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/ares-jak-vyhledat-firmu",
             "final_title": "ARES Company Search — What the Czech Register Reveals — Firmometr",
             "perf": {
-              "ttfb_ms": 40,
-              "fcp_ms": 96,
-              "dom_content_loaded_ms": 180,
-              "load_ms": 307,
-              "lcp_ms": 312,
+              "ttfb_ms": 39,
+              "fcp_ms": 92,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 282,
+              "lcp_ms": 288,
               "cls": 0.004,
-              "transfer_bytes": 15887,
+              "transfer_bytes": 15940,
               "resource_count": 24,
-              "page_bytes": 16487
+              "page_bytes": 16540
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3838,10 +3838,10 @@
           "final_url": "https://firmometr.cz/blog/monitoring-firem-sledovani-zmen",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.075,
-          "total_s": 0.075,
+          "ttfb_s": 0.07,
+          "total_s": 0.071,
           "headers": {
-            "cf-ray": "a4ff8ae0486d9181-MSP",
+            "cf-ray": "a5002e0ccb09f310-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3876,21 +3876,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.531,
+            "time_to_real_content_s": 0.64,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/monitoring-firem-sledovani-zmen",
             "final_title": "Monitoring firem: jak sledovat změny u obchodních partnerů — Firmometr",
             "perf": {
-              "ttfb_ms": 67,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 178,
-              "load_ms": 506,
-              "lcp_ms": 392,
+              "ttfb_ms": 57,
+              "fcp_ms": 124,
+              "dom_content_loaded_ms": 167,
+              "load_ms": 619,
+              "lcp_ms": 380,
               "cls": 0,
-              "transfer_bytes": 17228,
+              "transfer_bytes": 17327,
               "resource_count": 24,
-              "page_bytes": 750455
+              "page_bytes": 750554
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3913,21 +3913,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.343,
+            "time_to_real_content_s": 0.328,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/monitoring-firem-sledovani-zmen",
             "final_title": "Monitoring firem: jak sledovat změny u obchodních partnerů — Firmometr",
             "perf": {
-              "ttfb_ms": 40,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 193,
-              "load_ms": 319,
-              "lcp_ms": 320,
+              "ttfb_ms": 60,
+              "fcp_ms": 112,
+              "dom_content_loaded_ms": 196,
+              "load_ms": 305,
+              "lcp_ms": 308,
               "cls": 0,
-              "transfer_bytes": 16848,
+              "transfer_bytes": 16948,
               "resource_count": 24,
-              "page_bytes": 17448
+              "page_bytes": 17548
             },
             "console_error_count": 0,
             "console_errors": []
@@ -3948,10 +3948,10 @@
           "final_url": "https://firmometr.cz/en/blog/monitoring-firem-sledovani-zmen",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.066,
-          "total_s": 0.066,
+          "ttfb_s": 0.07,
+          "total_s": 0.071,
           "headers": {
-            "cf-ray": "a4ff8af5787b9200-MSP",
+            "cf-ray": "a5002e225f76072c-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -3986,21 +3986,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.546,
+            "time_to_real_content_s": 0.52,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/monitoring-firem-sledovani-zmen",
             "final_title": "Company Monitoring: How to Track Business Partner Changes and Get Insolvency Alerts — Firmometr",
             "perf": {
-              "ttfb_ms": 64,
+              "ttfb_ms": 73,
               "fcp_ms": 132,
-              "dom_content_loaded_ms": 313,
-              "load_ms": 519,
+              "dom_content_loaded_ms": 177,
+              "load_ms": 499,
               "lcp_ms": 132,
-              "cls": 0.002,
-              "transfer_bytes": 16835,
-              "resource_count": 24,
-              "page_bytes": 749250
+              "cls": 0,
+              "transfer_bytes": 16840,
+              "resource_count": 23,
+              "page_bytes": 424732
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4023,21 +4023,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.367,
+            "time_to_real_content_s": 0.297,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/monitoring-firem-sledovani-zmen",
             "final_title": "Company Monitoring: How to Track Business Partner Changes and Get Insolvency Alerts — Firmometr",
             "perf": {
-              "ttfb_ms": 76,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 215,
-              "load_ms": 343,
-              "lcp_ms": 132,
+              "ttfb_ms": 36,
+              "fcp_ms": 88,
+              "dom_content_loaded_ms": 155,
+              "load_ms": 276,
+              "lcp_ms": 88,
               "cls": 0.002,
-              "transfer_bytes": 16516,
-              "resource_count": 24,
-              "page_bytes": 17116
+              "transfer_bytes": 16515,
+              "resource_count": 23,
+              "page_bytes": 17115
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4058,10 +4058,10 @@
           "final_url": "https://firmometr.cz/blog/solventnost-firmy",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.086,
-          "total_s": 0.086,
+          "ttfb_s": 0.068,
+          "total_s": 0.068,
           "headers": {
-            "cf-ray": "a4ff8b0b9a52a1fd-MSP",
+            "cf-ray": "a5002e36be2f9007-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -4096,21 +4096,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.526,
+            "time_to_real_content_s": 0.521,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/solventnost-firmy",
             "final_title": "Solventnost firmy: jak ji zdarma ověřit z rejstříků — Firmometr",
             "perf": {
-              "ttfb_ms": 63,
-              "fcp_ms": 132,
-              "dom_content_loaded_ms": 179,
-              "load_ms": 500,
-              "lcp_ms": 388,
-              "cls": 0,
-              "transfer_bytes": 18636,
+              "ttfb_ms": 70,
+              "fcp_ms": 136,
+              "dom_content_loaded_ms": 176,
+              "load_ms": 499,
+              "lcp_ms": 392,
+              "cls": 0.014,
+              "transfer_bytes": 18640,
               "resource_count": 24,
-              "page_bytes": 751863
+              "page_bytes": 751867
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4133,21 +4133,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.339,
+            "time_to_real_content_s": 0.315,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/blog/solventnost-firmy",
             "final_title": "Solventnost firmy: jak ji zdarma ověřit z rejstříků — Firmometr",
             "perf": {
-              "ttfb_ms": 39,
-              "fcp_ms": 100,
-              "dom_content_loaded_ms": 191,
-              "load_ms": 312,
-              "lcp_ms": 324,
+              "ttfb_ms": 41,
+              "fcp_ms": 96,
+              "dom_content_loaded_ms": 178,
+              "load_ms": 292,
+              "lcp_ms": 296,
               "cls": 0.014,
-              "transfer_bytes": 18264,
+              "transfer_bytes": 18381,
               "resource_count": 24,
-              "page_bytes": 18864
+              "page_bytes": 18981
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4168,10 +4168,10 @@
           "final_url": "https://firmometr.cz/en/blog/solventnost-firmy",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.069,
-          "total_s": 0.069,
+          "ttfb_s": 0.066,
+          "total_s": 0.066,
           "headers": {
-            "cf-ray": "a4ff8b20fc8be18a-MSP",
+            "cf-ray": "a5002e4b89ad4bce-MSP",
             "cache-control": "public, max-age=0, must-revalidate",
             "server": "cloudflare"
           },
@@ -4206,21 +4206,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.531,
+            "time_to_real_content_s": 0.554,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/solventnost-firmy",
             "final_title": "Company Solvency: How to Check a Czech Company for Free — Firmometr",
             "perf": {
-              "ttfb_ms": 64,
-              "fcp_ms": 136,
-              "dom_content_loaded_ms": 181,
-              "load_ms": 505,
-              "lcp_ms": 136,
+              "ttfb_ms": 67,
+              "fcp_ms": 128,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 532,
+              "lcp_ms": 128,
               "cls": 0,
-              "transfer_bytes": 18195,
+              "transfer_bytes": 18190,
               "resource_count": 24,
-              "page_bytes": 750610
+              "page_bytes": 750605
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4243,21 +4243,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.333,
+            "time_to_real_content_s": 0.302,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/en/blog/solventnost-firmy",
             "final_title": "Company Solvency: How to Check a Czech Company for Free — Firmometr",
             "perf": {
-              "ttfb_ms": 36,
+              "ttfb_ms": 37,
               "fcp_ms": 92,
-              "dom_content_loaded_ms": 178,
-              "load_ms": 308,
+              "dom_content_loaded_ms": 170,
+              "load_ms": 279,
               "lcp_ms": 92,
               "cls": 0.004,
-              "transfer_bytes": 17903,
+              "transfer_bytes": 17827,
               "resource_count": 24,
-              "page_bytes": 18503
+              "page_bytes": 18427
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4278,10 +4278,10 @@
           "final_url": "https://firmometr.cz/search/27082440",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 1.024,
-          "total_s": 1.024,
+          "ttfb_s": 1.304,
+          "total_s": 1.304,
           "headers": {
-            "cf-ray": "a4ff8b360be2102a-MSP",
+            "cf-ray": "a5002e6059f5a1d3-MSP",
             "server": "cloudflare"
           },
           "cookies_set": [],
@@ -4315,21 +4315,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.743,
+            "time_to_real_content_s": 1.442,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/27082440",
             "final_title": "Alza.cz a.s. (IČO 27082440) — Firmometr",
             "perf": {
-              "ttfb_ms": 231,
-              "fcp_ms": 260,
-              "dom_content_loaded_ms": 402,
-              "load_ms": 711,
-              "lcp_ms": 260,
+              "ttfb_ms": 969,
+              "fcp_ms": 996,
+              "dom_content_loaded_ms": 1057,
+              "load_ms": 1417,
+              "lcp_ms": 996,
               "cls": 0.379,
-              "transfer_bytes": 14843,
+              "transfer_bytes": 14839,
               "resource_count": 36,
-              "page_bytes": 964185
+              "page_bytes": 964189
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4353,21 +4353,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.507,
+            "time_to_real_content_s": 0.469,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/27082440",
             "final_title": "Alza.cz a.s. (IČO 27082440) — Firmometr",
             "perf": {
-              "ttfb_ms": 206,
-              "fcp_ms": 244,
+              "ttfb_ms": 211,
+              "fcp_ms": 248,
               "dom_content_loaded_ms": 284,
-              "load_ms": 476,
-              "lcp_ms": 244,
+              "load_ms": 446,
+              "lcp_ms": 248,
               "cls": 0.379,
-              "transfer_bytes": 14507,
+              "transfer_bytes": 14461,
               "resource_count": 36,
-              "page_bytes": 17166
+              "page_bytes": 17120
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4388,10 +4388,10 @@
           "final_url": "https://firmometr.cz/search/25596641",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 1.404,
-          "total_s": 1.404,
+          "ttfb_s": 1.243,
+          "total_s": 1.243,
           "headers": {
-            "cf-ray": "a4ff8b5609caa225-MSP",
+            "cf-ray": "a5002e87bf33072c-MSP",
             "server": "cloudflare"
           },
           "cookies_set": [],
@@ -4425,21 +4425,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 1.142,
+            "time_to_real_content_s": 1.516,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/25596641",
             "final_title": "ZERO Brno s.r.o. (IČO 25596641) — Firmometr",
             "perf": {
-              "ttfb_ms": 690,
-              "fcp_ms": 720,
-              "dom_content_loaded_ms": 779,
-              "load_ms": 1107,
-              "lcp_ms": 720,
+              "ttfb_ms": 1076,
+              "fcp_ms": 1100,
+              "dom_content_loaded_ms": 1157,
+              "load_ms": 1486,
+              "lcp_ms": 1100,
               "cls": 0.125,
-              "transfer_bytes": 14595,
+              "transfer_bytes": 14592,
               "resource_count": 36,
-              "page_bytes": 962826
+              "page_bytes": 962888
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4463,21 +4463,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.53,
+            "time_to_real_content_s": 0.475,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/25596641",
             "final_title": "ZERO Brno s.r.o. (IČO 25596641) — Firmometr",
             "perf": {
-              "ttfb_ms": 217,
-              "fcp_ms": 256,
-              "dom_content_loaded_ms": 328,
-              "load_ms": 502,
-              "lcp_ms": 256,
+              "ttfb_ms": 214,
+              "fcp_ms": 260,
+              "dom_content_loaded_ms": 288,
+              "load_ms": 449,
+              "lcp_ms": 260,
               "cls": 0.125,
-              "transfer_bytes": 14218,
+              "transfer_bytes": 14247,
               "resource_count": 36,
-              "page_bytes": 15823
+              "page_bytes": 15852
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4498,10 +4498,10 @@
           "final_url": "https://firmometr.cz/search/45274649",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.468,
-          "total_s": 0.468,
+          "ttfb_s": 0.386,
+          "total_s": 0.387,
           "headers": {
-            "cf-ray": "a4ff8b800bd59181-MSP",
+            "cf-ray": "a5002eacfa309200-MSP",
             "server": "cloudflare"
           },
           "cookies_set": [],
@@ -4535,21 +4535,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.682,
+            "time_to_real_content_s": 0.687,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/45274649",
             "final_title": "ČEZ, a. s. (IČO 45274649) — Firmometr",
             "perf": {
-              "ttfb_ms": 220,
+              "ttfb_ms": 227,
               "fcp_ms": 252,
-              "dom_content_loaded_ms": 315,
-              "load_ms": 646,
+              "dom_content_loaded_ms": 305,
+              "load_ms": 658,
               "lcp_ms": 252,
-              "cls": 0.337,
+              "cls": 0.34,
               "transfer_bytes": 14879,
               "resource_count": 36,
-              "page_bytes": 971860
+              "page_bytes": 971888
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4573,21 +4573,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.516,
+            "time_to_real_content_s": 0.44,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/45274649",
             "final_title": "ČEZ, a. s. (IČO 45274649) — Firmometr",
             "perf": {
-              "ttfb_ms": 201,
-              "fcp_ms": 248,
-              "dom_content_loaded_ms": 289,
-              "load_ms": 487,
-              "lcp_ms": 248,
+              "ttfb_ms": 217,
+              "fcp_ms": 256,
+              "dom_content_loaded_ms": 293,
+              "load_ms": 412,
+              "lcp_ms": 256,
               "cls": 0.34,
-              "transfer_bytes": 14500,
+              "transfer_bytes": 14545,
               "resource_count": 36,
-              "page_bytes": 24790
+              "page_bytes": 24863
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4599,8 +4599,10 @@
     {
       "url": "https://firmometr.cz/search/00177041",
       "tier": "light",
-      "verdict": "OK",
-      "reasons": [],
+      "verdict": "WARN",
+      "reasons": [
+        "HTTP[chrome] slow TTFB 2.15 s"
+      ],
       "http": [
         {
           "ua": "chrome",
@@ -4608,10 +4610,10 @@
           "final_url": "https://firmometr.cz/search/00177041",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.534,
-          "total_s": 0.535,
+          "ttfb_s": 2.15,
+          "total_s": 2.15,
           "headers": {
-            "cf-ray": "a4ff8b9b9a18102a-MSP",
+            "cf-ray": "a5002ec91e57f310-MSP",
             "server": "cloudflare"
           },
           "cookies_set": [],
@@ -4645,21 +4647,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.701,
+            "time_to_real_content_s": 0.718,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/00177041",
             "final_title": "Škoda Auto a.s. (IČO 00177041) — Firmometr",
             "perf": {
-              "ttfb_ms": 221,
-              "fcp_ms": 252,
-              "dom_content_loaded_ms": 310,
-              "load_ms": 673,
-              "lcp_ms": 252,
+              "ttfb_ms": 217,
+              "fcp_ms": 244,
+              "dom_content_loaded_ms": 304,
+              "load_ms": 666,
+              "lcp_ms": 244,
               "cls": 0.333,
-              "transfer_bytes": 14887,
+              "transfer_bytes": 14934,
               "resource_count": 36,
-              "page_bytes": 966906
+              "page_bytes": 966953
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4683,21 +4685,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.51,
+            "time_to_real_content_s": 0.47,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/00177041",
             "final_title": "Škoda Auto a.s. (IČO 00177041) — Firmometr",
             "perf": {
               "ttfb_ms": 208,
-              "fcp_ms": 248,
-              "dom_content_loaded_ms": 289,
-              "load_ms": 479,
-              "lcp_ms": 248,
+              "fcp_ms": 244,
+              "dom_content_loaded_ms": 282,
+              "load_ms": 431,
+              "lcp_ms": 244,
               "cls": 0.335,
-              "transfer_bytes": 14551,
+              "transfer_bytes": 14505,
               "resource_count": 36,
-              "page_bytes": 19879
+              "page_bytes": 19833
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4718,10 +4720,10 @@
           "final_url": "https://firmometr.cz/search/60193336",
           "status": 200,
           "redirects": [],
-          "ttfb_s": 0.504,
-          "total_s": 0.504,
+          "ttfb_s": 0.432,
+          "total_s": 0.432,
           "headers": {
-            "cf-ray": "a4ff8bb94ba19007-MSP",
+            "cf-ray": "a5002eee8a3f102a-MSP",
             "server": "cloudflare"
           },
           "cookies_set": [],
@@ -4755,21 +4757,21 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.713,
+            "time_to_real_content_s": 0.698,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/60193336",
             "final_title": "O2 Czech Republic a.s. (IČO 60193336) — Firmometr",
             "perf": {
-              "ttfb_ms": 231,
-              "fcp_ms": 260,
-              "dom_content_loaded_ms": 314,
-              "load_ms": 674,
-              "lcp_ms": 260,
+              "ttfb_ms": 246,
+              "fcp_ms": 272,
+              "dom_content_loaded_ms": 337,
+              "load_ms": 665,
+              "lcp_ms": 272,
               "cls": 0.754,
-              "transfer_bytes": 14888,
-              "resource_count": 38,
-              "page_bytes": 969804
+              "transfer_bytes": 14839,
+              "resource_count": 36,
+              "page_bytes": 969224
             },
             "console_error_count": 0,
             "console_errors": []
@@ -4793,17 +4795,17 @@
               "mentions_forpsi": false
             },
             "challenge_seen": false,
-            "time_to_real_content_s": 0.504,
+            "time_to_real_content_s": 0.468,
             "stuck_on_challenge": false,
             "final_status": 200,
             "final_url": "https://firmometr.cz/search/60193336",
             "final_title": "O2 Czech Republic a.s. (IČO 60193336) — Firmometr",
             "perf": {
-              "ttfb_ms": 201,
-              "fcp_ms": 244,
-              "dom_content_loaded_ms": 285,
-              "load_ms": 473,
-              "lcp_ms": 244,
+              "ttfb_ms": 192,
+              "fcp_ms": 224,
+              "dom_content_loaded_ms": 262,
+              "load_ms": 434,
+              "lcp_ms": 224,
               "cls": 0.756,
               "transfer_bytes": 14463,
               "resource_count": 36,
