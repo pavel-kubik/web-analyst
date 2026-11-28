@@ -32,7 +32,7 @@ SLOW_RESPONSE_S = 15
 STATUS_TEXT = {
     "mail_sent": "e-mail odeslán",
     "mail_failed": "formulář hlásí chybu odeslání e-mailu (wp_mail selhal)",
-    "spam": "formulář vyhodnotil zprávu jako spam (reCAPTCHA / antispam)",
+    "spam": "formulář vyhodnotil zprávu jako spam (reCAPTCHA / antispam; je nastavený FORM_CHECK_TOKEN a zapnutý snippet na webu?)",
     "validation_failed": "validace polí selhala - změnil se formulář?",
     "acceptance_missing": "chybí souhlas se zpracováním údajů",
     "aborted": "odeslání přerušeno pluginem",
@@ -63,12 +63,12 @@ def _fill_values(form: dict, run: str, email: str) -> dict:
     return {name: str(v).replace("{run}", run).replace("{email}", email) for name, v in form["fields"].items()}
 
 
-def check(form: dict, run: str, email: str, dry_run: bool = False) -> dict:
+def check(form: dict, run: str, email: str, dry_run: bool = False, token: str = "") -> dict:
     from playwright.sync_api import sync_playwright
 
     url = f"{form['url']}?wa_form_check={run}"   # query string skips the page cache (WP Fastest Cache)
     feedback_path = f"/contact-form-7/v1/contact-forms/{form['form_id']}/feedback"
-    result = {"form": form["id"], "url": form["url"], "run": run, "dry_run": dry_run,
+    result = {"form": form["id"], "url": form["url"], "run": run, "dry_run": dry_run, "token_used": bool(token),
               "expected_redirect": form.get("success_url_contains")}
     console_errors = []
     with sync_playwright() as pw:
@@ -85,6 +85,11 @@ def check(form: dict, run: str, email: str, dry_run: bool = False) -> dict:
                 # The theme hides the real checkbox (display:none) and styles its label, so tick it from JS.
                 scope.locator(f"input[type=checkbox][name='{name}']").evaluate(
                     "el => { el.checked = true; el.dispatchEvent(new Event('change', {bubbles: true})); }")
+            if token:
+                # Lets the site skip its antispam check for this one submission (WPCode snippet on the site):
+                # reCAPTCHA v3 scores a headless browser as a bot. The token is a GitHub secret, never stored here.
+                scope.evaluate("(f, t) => { const i = document.createElement('input'); i.type = 'hidden';"
+                               " i.name = '_wa_form_check'; i.value = t; f.appendChild(i); }", token)
             time.sleep(RECAPTCHA_SETTLE_S)
             if dry_run:
                 result["outcome"] = "dry_run"
@@ -171,10 +176,11 @@ def main() -> int:
         forms = [f for f in forms if f["id"] in args.form]
     run = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H%MZ")
     email = os.environ.get("FORM_CHECK_EMAIL") or DEFAULT_EMAIL
+    token = os.environ.get("FORM_CHECK_TOKEN", "")
 
     results = []
     for form in forms:
-        r = check(form, run, email, dry_run=args.dry_run)
+        r = check(form, run, email, dry_run=args.dry_run, token=token)
         results.append(r)
         if not args.dry_run:
             save(r)
