@@ -2,7 +2,7 @@ name: Test
 
 on:
   push:
-    paths-ignore: ["results/**"]   # the daily results commits change no code
+    paths-ignore: ["results/**", "form-checks/**"]   # the daily results commits change no code
   pull_request:
   workflow_dispatch:
     inputs:

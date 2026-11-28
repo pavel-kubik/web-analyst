@@ -1,0 +1,71 @@
+name: Form check
+
+# Once a day submits each contact form from forms.yml in a real browser and checks that Contact Form 7 answers
+# "mail_sent". A failed check fails the run, so GitHub e-mails the repo owner (Settings -> Notifications -> Actions).
+# Every passing run sends one real e-mail to the site owner and adds one Flamingo entry - see forms.yml.
+
+on:
+  schedule:
+    - cron: "23 6 * * *"   # daily, 06:23 UTC = 07:23 / 08:23 Prague, before the office opens
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: "auto = repo variable CI_RUNNER (self-hosted unless it is 'github')"
+        type: choice
+        options: [auto, github, self-hosted]
+        default: auto
+      dry_run:
+        description: "Fill the form but do not submit (no e-mail is sent)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: form-check
+  cancel-in-progress: false
+
+jobs:
+  form-check:
+    # Same runner choice as measure.yml (self-hosted OCI VM by default, see runbooks/self-hosted-runner.md).
+    runs-on: ${{ (inputs.runner == 'github' || (inputs.runner != 'self-hosted' && vars.CI_RUNNER == 'github')) && 'ubuntu-latest' || fromJSON('["self-hosted", "web-analyst"]') }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+        if: runner.environment == 'github-hosted'
+      - run: python -m playwright install chromium
+        if: runner.environment == 'self-hosted'
+      - name: Submit forms
+        id: check
+        env:
+          FORM_CHECK_EMAIL: ${{ vars.FORM_CHECK_EMAIL }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set +e
+          if [ "$DRY_RUN" = "true" ]; then
+            python -m webanalyst.form_check --dry-run > summary.md
+          else
+            python -m webanalyst.form_check > summary.md
+          fi
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        if: inputs.dry_run != true
+        run: |
+          git config user.name "web-analyst-bot"
+          git config user.email "web-analyst-bot@users.noreply.github.com"
+          git add form-checks
+          git diff --cached --quiet || git commit -m "Form check $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin "${GITHUB_REF_NAME}" && git push
+      - name: Fail when a form is broken
+        if: steps.check.outputs.exit != '0'
+        run: |
+          echo "::error::Kontaktní formulář nefunguje - viz job summary."
+          exit 1
