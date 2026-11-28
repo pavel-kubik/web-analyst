@@ -126,6 +126,7 @@ def check(form: dict, run: str, email: str, dry_run: bool = False, token: str = 
                     body = json.loads(captured["body"])
                     result["cf7_status"] = body.get("status")
                     result["cf7_message"] = body.get("message")
+                    result["site_token_check"] = body.get("wa_token")   # added by the WPCode snippet: ok / mismatch
                     result["invalid_fields"] = [f.get("field") for f in body.get("invalid_fields") or []]
                 except ValueError:
                     result["outcome"] = "error"
