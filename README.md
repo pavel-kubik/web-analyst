@@ -74,6 +74,13 @@ only in the job summary). It runs the unit tests, measures, writes a verdict sum
 commits `results/` back to the repo. Hosting alternatives for this job are compared in
 [tasks/002-measure-hosting-options.md](tasks/002-measure-hosting-options.md).
 
+[`.github/workflows/form-check.yml`](.github/workflows/form-check.yml) runs daily at 06:23 UTC and submits every
+contact form from [`forms.yml`](forms.yml) in Chromium (`python -m webanalyst.form_check`). It passes only when
+Contact Form 7 answers `mail_sent`; `mail_failed`, `spam`, a validation error or no answer within 90 s fail the run,
+so GitHub notifies the repo owner. Results go to `form-checks/<form>/`. Each passing run sends one real e-mail to the
+site owner (marked as an automated test); the sender address comes from the repo variable `FORM_CHECK_EMAIL`.
+*Actions → Form check → Run workflow* with *dry run* fills the form without submitting.
+
 [`.github/workflows/test.yml`](.github/workflows/test.yml) runs the unit tests on every push and pull request
 (except the bot's `results/` commits) without touching any measured site.
 

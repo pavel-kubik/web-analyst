@@ -1,0 +1,20 @@
+# Contact forms submitted once a day by the Form check workflow (.github/workflows/form-check.yml).
+# Each check opens the page in Chromium, fills the fields, submits and waits for the Contact Form 7 REST answer
+# (POST .../contact-form-7/v1/contact-forms/<id>/feedback). Only status "mail_sent" passes.
+#
+# Every passing run sends a real e-mail to the site owner and adds an entry to Flamingo, so the values below
+# say clearly that it is an automated test. The sender e-mail comes from the repo variable FORM_CHECK_EMAIL
+# (kept out of this public file); the default is used when it is not set.
+forms:
+  - id: middex-kontakt
+    site: middex
+    url: https://www.middex.cz/kontakt/
+    form_id: 5                     # Contact Form 7 form ID
+    success_url_contains: /dekujeme/   # the theme redirects here on wpcf7mailsent
+    fields:                        # input name -> value; {run} is replaced with the run timestamp
+      jmeno: "web-analyst TEST"
+      email: "{email}"
+      telefon: "000000000"
+      misto-instalace: "AUTOMATICKY TEST FORMULARE - ignorovat"
+      zprava: "Automaticky denni test kontaktniho formulare z web-analyst ({run}). Neodpovidejte."
+    checkboxes: [souhlas]
