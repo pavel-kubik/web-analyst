@@ -5,6 +5,10 @@
 # Every passing run sends a real e-mail to the site owner and adds an entry to Flamingo, so the values below
 # say clearly that it is an automated test. The sender e-mail comes from the repo variable FORM_CHECK_EMAIL
 # (kept out of this public file); the default is used when it is not set.
+#
+# reCAPTCHA v3 scores the headless browser as a bot, so the check sends a hidden field _wa_form_check with the
+# secret FORM_CHECK_TOKEN. A WPCode snippet on the site (CF7 filter wpcf7_skip_spam_check) compares its SHA-256
+# hash and skips the antispam check only for that submission.
 forms:
   - id: middex-kontakt
     site: middex

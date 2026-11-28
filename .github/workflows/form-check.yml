@@ -46,6 +46,7 @@ jobs:
         id: check
         env:
           FORM_CHECK_EMAIL: ${{ vars.FORM_CHECK_EMAIL }}
+          FORM_CHECK_TOKEN: ${{ secrets.FORM_CHECK_TOKEN }}   # lets the test pass reCAPTCHA (WPCode snippet on the site)
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           set +e
