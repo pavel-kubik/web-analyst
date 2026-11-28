@@ -1,0 +1,21 @@
+{
+  "form": "middex-kontakt",
+  "url": "https://www.middex.cz/kontakt/",
+  "run": "2026-11-28T0145Z",
+  "dry_run": false,
+  "expected_redirect": "/dekujeme/",
+  "response_s": 1.55,
+  "http_status": 200,
+  "cf7_status": "spam",
+  "cf7_message": "Během odesílání zprávy nastala chyba. Zkuste to prosím později.",
+  "invalid_fields": [],
+  "final_url": "https://www.middex.cz/kontakt/?wa_form_check=2026-11-28T0145Z",
+  "redirected": false,
+  "console_errors": [
+    "requestStorageAccess: Permission denied."
+  ],
+  "verdict": "FAIL",
+  "reasons": [
+    "spam: formulář vyhodnotil zprávu jako spam (reCAPTCHA / antispam) - „Během odesílání zprávy nastala chyba. Zkuste to prosím později.“"
+  ]
+}
